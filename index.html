@@ -3,418 +3,464 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solução Solar — Energia que trabalha por você</title>
-<meta name="description" content="Energia solar fotovoltaica, aquecimento de piscina, aquecimento solar e instalação de Wallbox. Acompanhamento de ponta a ponta, do projeto ao pós-venda.">
+<title>Solução Solar — O sol é seu.</title>
+<meta name="description" content="Energia solar fotovoltaica, aquecimento de piscina, aquecimento solar e instalação de Wallbox. Do projeto ao pós-venda, a Solução Solar cuida de tudo.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0A0D12;
-  --ink-2:#11161E;
-  --ink-3:#1A212B;
-  --ivory:#F6F2EA;
-  --ivory-2:#ECE6DA;
-  --paper:#FBF9F5;
-  --text:#14181F;
-  --muted:#5D6470;
-  --muted-d:#9AA3B0;
-  --line:rgba(20,24,31,.12);
-  --line-d:rgba(255,255,255,.12);
-  --sun:#F2A33A;
-  --sun-2:#FFCF6E;
-  --ember:#E0662B;
-  --green:#0F4D3A;
-  --green-2:#1E7A5C;
-  --serif:"Fraunces", Georgia, serif;
-  --sans:"Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --r:22px;
-  --max:1240px;
-  --ease:cubic-bezier(.2,.7,.1,1);
+  --bg:#FAF9F5;
+  --card:#F0EFEA;
+  --card-2:#E7E6DF;
+  --line:rgba(14,59,44,.13);
+  --ink:#0E3B2C;
+  --ink-soft:#4C6158;
+  --green:#0B5E3F;
+  --green-d:#0A3D2B;
+  --green-dd:#072C1F;
+  --sun:#F2A72E;
+  --sun-l:#F7C66E;
+  --sun-pale:#FFF6E3;
+  --white:#fff;
+  --head:"Manrope", system-ui, sans-serif;
+  --body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r:14px;
+  --max:1360px;
+  --ease:cubic-bezier(.22,.8,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);background:var(--paper);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-section[id],article[id]{scroll-margin-top:126px}
-.prod[id]{scroll-margin-top:60px}
-.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
-.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--sun)}
-.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.02em}
-.h-xl{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,7.4vw,6.6rem);line-height:.98;letter-spacing:-.035em}
-.h-l{font-family:var(--serif);font-weight:300;font-size:clamp(2.1rem,5vw,4.2rem);line-height:1.02;letter-spacing:-.03em}
-.h-m{font-family:var(--sans);font-weight:600;font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.1;letter-spacing:-.025em}
-.lead{font-size:clamp(1.05rem,1.5vw,1.3rem);color:var(--muted);max-width:60ch}
-.gold{background:linear-gradient(100deg,var(--sun-2),var(--sun) 45%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
-em.i{font-style:italic}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+section[id]{scroll-margin-top:84px}
+.wrap{width:min(var(--max),100% - 64px);margin-inline:auto}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.6em;border-radius:999px;font-weight:600;font-size:.98rem;transition:transform .3s var(--ease),background .3s,box-shadow .3s;white-space:nowrap}
-.btn-sun{background:linear-gradient(120deg,var(--sun-2),var(--sun) 55%,var(--ember));color:#1B1206;box-shadow:0 10px 30px -10px rgba(242,163,58,.7)}
-.btn-sun:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(242,163,58,.85)}
-.btn-ghost{border:1px solid currentColor;opacity:.92}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
-.btn-dark{background:var(--ink);color:#fff}
-.btn-dark:hover{transform:translateY(-2px)}
-.link-arrow{display:inline-flex;align-items:center;gap:.4em;font-weight:600;color:var(--sun)}
-.link-arrow span{transition:transform .3s var(--ease)}
-.link-arrow:hover span{transform:translateX(4px)}
+/* type */
+.h1{font-family:var(--head);font-weight:500;font-size:clamp(3.4rem,7.6vw,6.9rem);line-height:.98;letter-spacing:-.075em}
+.h2{font-family:var(--head);font-weight:500;font-size:clamp(2.4rem,4.9vw,4.35rem);line-height:1.08;letter-spacing:-.06em}
+.h3{font-family:var(--head);font-weight:600;font-size:clamp(1.5rem,2.2vw,1.9rem);line-height:1.15;letter-spacing:-.045em}
+.h1 b,.h2 b{font-weight:800}
+.over{font-family:var(--head);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.big-p{font-family:var(--head);font-size:clamp(1.15rem,1.7vw,1.45rem);line-height:1.45;letter-spacing:-.025em;font-weight:500}
+.muted{color:var(--ink-soft)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.9rem;padding:.95rem 1.1rem .95rem 1.35rem;border-radius:8px;font-family:var(--head);font-weight:600;font-size:.95rem;letter-spacing:-.01em;transition:transform .35s var(--ease),background .3s,box-shadow .3s;white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translate(2px,-2px)}
+.btn-dark{background:var(--green-d);color:#fff}
+.btn-dark:hover{background:var(--green)}
+.btn-sun{background:var(--sun);color:var(--green-dd)}
+.btn-sun:hover{background:var(--sun-l)}
+.btn-white{background:#fff;color:var(--green-d)}
+.btn-sm{padding:.6rem .8rem .6rem 1rem;font-size:.85rem;gap:.6rem}
+.circle-arrow{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);transition:background .3s,transform .3s}
+.circle-arrow svg{width:15px;height:15px}
+.text-link{display:inline-flex;align-items:center;gap:.8rem;font-family:var(--head);font-weight:600;font-size:.95rem}
+.text-link:hover .circle-arrow{background:var(--sun);border-color:var(--sun);transform:translateX(3px)}
 
 /* NAV */
-.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(10,13,18,.72);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-color:var(--line-d)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;color:#fff}
-.logo{display:flex;align-items:center;gap:.6rem;font-weight:600;letter-spacing:-.01em;font-size:1.05rem}
-.logo-mark{width:30px;height:30px}
-.logo b{font-family:var(--serif);font-weight:400;font-size:1.25rem;letter-spacing:-.02em}
-.nav-links{display:flex;gap:2rem;font-size:.9rem;color:rgba(255,255,255,.78)}
-.nav-links a:hover{color:#fff}
-.nav-cta{padding:.6em 1.2em;font-size:.88rem}
-.burger{display:none;width:40px;height:40px;position:relative}
-.burger i{position:absolute;left:10px;right:10px;height:1.5px;background:#fff;transition:.3s}
-.burger i:nth-child(1){top:15px}.burger i:nth-child(2){top:24px}
-.nav.open .burger i:nth-child(1){top:19px;transform:rotate(45deg)}
-.nav.open .burger i:nth-child(2){top:19px;transform:rotate(-45deg)}
-.mobile-menu{display:none}
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(250,249,245,.88);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 1px 0 var(--line)}
+.nav-in{height:76px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;width:calc(100% - 48px);margin-inline:auto}
+.logo img{height:42px;width:auto}
+.nav-links{display:flex;gap:2rem;font-family:var(--head);font-size:.86rem;font-weight:500}
+.nav-links a{opacity:.8;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-r{justify-self:end;display:flex;gap:.6rem;align-items:center}
+.menu-btn{display:none;width:44px;height:44px;border-radius:8px;position:relative}
+.menu-btn i{position:absolute;left:12px;right:12px;height:2px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+.menu-btn i:nth-child(1){top:15px}.menu-btn i:nth-child(2){top:21px}.menu-btn i:nth-child(3){top:27px}
+.nav.open .menu-btn i:nth-child(1){top:21px;transform:rotate(45deg)}
+.nav.open .menu-btn i:nth-child(2){opacity:0}
+.nav.open .menu-btn i:nth-child(3){top:21px;transform:rotate(-45deg)}
+.m-menu{display:none}
 
 /* HERO */
-.hero{position:relative;min-height:100svh;background:radial-gradient(120% 80% at 50% 110%,#2A1A08 0%,var(--ink) 55%);color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 0 56px}
-.hero-sun{position:absolute;left:50%;top:58%;width:min(120vw,1300px);aspect-ratio:1;transform:translate(-50%,0);border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(255,207,110,.95) 0%,rgba(242,163,58,.75) 18%,rgba(224,102,43,.35) 34%,rgba(224,102,43,0) 60%);filter:blur(2px);will-change:transform;pointer-events:none}
-.hero-rings{position:absolute;left:50%;top:58%;width:min(150vw,1700px);aspect-ratio:1;transform:translate(-50%,0);pointer-events:none;opacity:.5}
-.hero-grid{position:absolute;inset:auto 0 0 0;height:46%;background:
-  linear-gradient(to top,var(--ink) 0%,rgba(10,13,18,0) 70%),
-  repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 80px),
-  repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 80px);
-  transform:perspective(600px) rotateX(62deg);transform-origin:bottom;opacity:.55;pointer-events:none}
-.hero-content{position:relative;z-index:2;text-align:center}
-.hero .eyebrow{margin-bottom:1.4rem}
-.hero h1{max-width:14ch;margin:0 auto}
-.hero p.lead{color:rgba(255,255,255,.72);margin:1.6rem auto 2.2rem;text-align:center}
-.hero-ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
-.hero-stats{position:relative;z-index:2;margin-top:clamp(3rem,8vh,6rem);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-d)}
-.hero-stats div{padding:1.4rem 1rem 0;text-align:center}
-.hero-stats b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,3.4vw,2.8rem);letter-spacing:-.03em}
-.hero-stats span{font-size:.82rem;color:var(--muted-d)}
-.scroll-cue{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:22px;height:34px;border:1.5px solid rgba(255,255,255,.35);border-radius:12px;z-index:3}
-.scroll-cue::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:2px;background:#fff;transform:translateX(-50%);animation:cue 1.8s infinite}
-@keyframes cue{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,10px)}}
+.hero{padding:84px 8px 8px;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hero-card{border-radius:var(--r);position:relative;overflow:hidden}
+.hero-y{background:var(--sun);padding:clamp(1.6rem,3vw,2.6rem);display:flex;flex-direction:column;min-height:560px}
+.hero-y .over{color:var(--green-d)}
+.hero-y h1{margin-top:auto;color:var(--green-dd)}
+.hero-y p{margin:1.4rem 0 2rem;max-width:44ch;font-size:1.02rem;color:var(--green-dd)}
+.hero-foot{margin-top:2.4rem;padding-top:1.1rem;border-top:1px solid rgba(7,44,31,.18);display:flex;justify-content:space-between;align-items:center;font-size:.88rem;font-weight:500;color:var(--green-dd)}
+.hero-foot span{display:flex;gap:.6rem;align-items:center}
+.hero-foot a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(7,44,31,.25);transition:background .3s}
+.hero-foot a:hover{background:rgba(255,255,255,.35)}
+.hero-img img{position:absolute;inset:0;width:100%;height:115%;object-fit:cover;will-change:transform}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 30%,transparent 55%,rgba(0,0,0,.35))}
+.hero-img .over{position:absolute;left:1.6rem;top:1.5rem;color:#fff;z-index:2}
+.glass{position:absolute;left:1rem;right:1rem;bottom:1rem;z-index:2;border-radius:12px;padding:1.3rem 1.4rem;background:rgba(250,249,245,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.glass-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1rem}
+.glass-top b{font-family:var(--head);font-size:1.3rem;letter-spacing:-.04em;font-weight:600}
+.glass-top span{font-size:.7rem;font-weight:700;letter-spacing:.14em;color:var(--ink-soft)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.2rem;font-size:.9rem}
+.feat div{display:flex;gap:.6rem;align-items:center}
+.feat svg{width:18px;height:18px;flex:none;color:var(--green)}
 
-/* PRODUCT SUBNAV (Apple-like) */
-.subnav{position:sticky;top:68px;z-index:40;background:rgba(251,249,245,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
-.subnav-in{display:flex;align-items:center;gap:1.6rem;height:58px;overflow-x:auto;scrollbar-width:none}
-.subnav-in::-webkit-scrollbar{display:none}
-.subnav strong{font-family:var(--serif);font-weight:400;font-size:1.15rem;white-space:nowrap;margin-right:auto}
-.subnav a{font-size:.86rem;color:var(--muted);white-space:nowrap;padding:.3rem 0;border-bottom:1.5px solid transparent;transition:.25s}
-.subnav a:hover,.subnav a.active{color:var(--text);border-color:var(--sun)}
+/* INTRO */
+.intro{padding:clamp(5rem,10vw,8.5rem) 0 clamp(4rem,8vw,6rem)}
+.intro-top{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.intro-top .big-p{margin-bottom:1.2rem}
+.intro-top p.muted{max-width:52ch;margin-bottom:2rem}
+.trio{margin-top:clamp(3rem,6vw,5rem);display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;border-top:1px solid var(--line);padding-top:2rem}
+.trio div{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.2rem}
+.trio small{font-size:.75rem;color:var(--ink-soft);padding-top:.25rem}
+.trio b{font-family:var(--head);font-weight:600;letter-spacing:-.02em}
+.trio p{grid-column:2;color:var(--ink-soft);font-size:.92rem}
 
-/* MANIFESTO */
-.manifesto{padding:clamp(6rem,14vw,11rem) 0;background:var(--paper)}
-.manifesto p{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,4.4vw,3.8rem);line-height:1.12;letter-spacing:-.025em;max-width:22ch}
-.manifesto .w{color:rgba(20,24,31,.16);transition:color .4s}
-.manifesto .w.on{color:var(--text)}
-.manifesto .w.hl.on{color:var(--sun)}
+/* DAY */
+.day{position:relative;min-height:max(100svh,680px);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.day-img{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease),transform 7s linear;transform:scale(1.06)}
+.day-img.on{opacity:1;transform:scale(1)}
+.day-img img{width:100%;height:100%;object-fit:cover}
+.day::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,20,14,.78) 0%,rgba(5,20,14,.45) 45%,rgba(5,20,14,.05) 75%),linear-gradient(0deg,rgba(5,20,14,.6),transparent 40%);z-index:1}
+.day-in{position:relative;z-index:2;width:min(var(--max),100% - 64px);margin:0 auto;padding:7rem 0 2.6rem}
+.day-time{font-family:var(--head);font-weight:500;font-size:clamp(2.6rem,5vw,4.4rem);letter-spacing:-.06em;color:var(--sun);line-height:1}
+.day-time small{font-size:.32em;letter-spacing:.05em;margin-left:.3rem;font-weight:600}
+.day h2{margin:1.1rem 0 1.2rem}
+.day p{max-width:44ch;color:rgba(255,255,255,.82)}
+.day-txt{transition:opacity .4s,transform .5s var(--ease)}
+.day-txt.swap{opacity:0;transform:translateY(12px)}
+.day-bar{margin-top:3rem;display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap}
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:10px;background:rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);overflow-x:auto;max-width:100%;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;display:flex;gap:.6rem;align-items:center;padding:.7rem 1.1rem;border-radius:7px;font-family:var(--head);font-size:.86rem;font-weight:600;color:rgba(255,255,255,.85);white-space:nowrap;overflow:hidden;transition:background .3s,color .3s}
+.tab small{font-weight:500;opacity:.6;font-size:.78rem}
+.tab.on{background:var(--sun);color:var(--green-dd)}
+.tab.on small{opacity:.75}
+.tab i{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--green-d);opacity:.5}
+.tab.on.play i{animation:bar 7s linear forwards}
+@keyframes bar{to{width:100%}}
+.day-label{font-size:.72rem;font-weight:700;letter-spacing:.16em;color:rgba(255,255,255,.7)}
 
 /* PRODUCTS */
-.products{background:var(--paper)}
-.prod{padding:clamp(4rem,9vw,8rem) 0;border-top:1px solid var(--line)}
-.prod-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
-.prod:nth-child(even) .prod-visual{order:2}
-.prod-visual{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/4.4;background:var(--ink);isolation:isolate}
-.prod-visual svg{width:100%;height:100%}
-.prod-tag{position:absolute;top:20px;left:20px;z-index:2;padding:.45em .9em;border-radius:999px;font-size:.75rem;font-weight:600;letter-spacing:.06em;background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18)}
-.prod-num{font-family:var(--serif);font-size:.95rem;color:var(--muted);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem}
-.prod-num::after{content:"";height:1px;width:48px;background:var(--line)}
-.prod h2{margin-bottom:1.2rem}
-.prod .lead{margin-bottom:2rem}
-.specs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:2rem}
-.specs div{padding:1.2rem .4rem 1.2rem 0}
-.specs div+div{padding-left:1rem;border-left:1px solid var(--line)}
-.specs b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.03em;line-height:1.1}
-.specs span{font-size:.8rem;color:var(--muted);line-height:1.3;display:block;margin-top:.3rem}
-.checks{list-style:none;display:grid;gap:.75rem;margin-bottom:2.2rem}
-.checks li{display:flex;gap:.8rem;align-items:flex-start;font-size:1rem}
-.checks li::before{content:"";flex:0 0 20px;height:20px;margin-top:2px;border-radius:50%;background:var(--ivory-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.2l2.6 2.6L14 7.4' fill='none' stroke='%230F4D3A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
-.prod-actions{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+.sec{padding:clamp(5rem,10vw,8.5rem) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:clamp(2.4rem,5vw,4rem)}
+.sec-head p{max-width:40ch}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pcard{background:var(--card);border-radius:var(--r);padding:12px;display:flex;flex-direction:column;transition:transform .5s var(--ease)}
+.pcard:hover{transform:translateY(-4px)}
+.pcard.hl{background:var(--sun)}
+.pc-top{display:flex;justify-content:space-between;font-size:.74rem;font-weight:600;padding:.3rem .4rem .8rem;color:var(--ink-soft)}
+.pcard.hl .pc-top{color:var(--green-dd)}
+.pc-img{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:1/1.02;background:var(--card-2)}
+.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.pcard:hover .pc-img img{transform:scale(1.05)}
+.pc-img .circle-arrow{position:absolute;right:12px;bottom:12px;background:#fff;border:0}
+.pc-body{padding:1.2rem .5rem .4rem;display:flex;flex-direction:column;flex:1}
+.pc-body h3{font-family:var(--head);font-size:1.55rem;font-weight:600;letter-spacing:-.05em;line-height:1.1}
+.pc-body .sub{font-size:.9rem;color:var(--ink-soft);margin:.3rem 0 1rem}
+.pcard.hl .sub{color:var(--green-d)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.3rem}
+.chip{font-size:.74rem;font-weight:500;padding:.3rem .6rem;border-radius:6px;border:1px solid var(--line);background:rgba(255,255,255,.5)}
+.pc-foot{margin-top:auto;border-top:1px solid var(--line);padding-top:1rem;display:flex;justify-content:space-between;align-items:flex-end;gap:.6rem}
+.pcard.hl .pc-foot,.pcard.hl .chip{border-color:rgba(7,44,31,.2)}
+.pc-foot small{display:block;font-size:.72rem;color:var(--ink-soft)}
+.pcard.hl .pc-foot small{color:var(--green-d)}
+.pc-foot b{font-family:var(--head);font-size:1.7rem;font-weight:600;letter-spacing:-.05em;line-height:1.1}
+.pc-foot a{font-family:var(--head);font-size:.82rem;font-weight:600;display:flex;gap:.3rem;align-items:center;white-space:nowrap}
+.fine{font-size:.78rem;color:var(--ink-soft);margin-top:1.4rem;max-width:90ch}
 
-/* SVG animation helpers */
-@keyframes shimmer{0%{transform:translateX(-120%)}100%{transform:translateX(220%)}}
-@keyframes rise{0%{transform:translateY(8px);opacity:0}50%{opacity:.9}100%{transform:translateY(-26px);opacity:0}}
-@keyframes wave{to{transform:translateX(-200px)}}
-@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-@keyframes flow{to{stroke-dashoffset:-40}}
-@keyframes spin{to{transform:rotate(360deg)}}
-.anim-shimmer{animation:shimmer 4.5s var(--ease) infinite}
-.anim-rise{animation:rise 3s ease-in infinite}
-.anim-wave{animation:wave 6s linear infinite}
-.anim-pulse{animation:pulse 2.4s ease-in-out infinite}
-.anim-flow{stroke-dasharray:6 14;animation:flow 1.2s linear infinite}
-.anim-spin{transform-origin:center;transform-box:fill-box;animation:spin 60s linear infinite}
+/* PLACES */
+.places{background:var(--bg)}
+.pl-tabs{display:inline-flex;gap:4px;padding:4px;border-radius:10px;background:var(--card)}
+.pl-tab{padding:.65rem 1.2rem;border-radius:7px;font-family:var(--head);font-size:.88rem;font-weight:600;color:var(--ink-soft);transition:.3s}
+.pl-tab.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.pl-card{display:grid;grid-template-columns:1.25fr 1fr;gap:12px;background:var(--card);border-radius:var(--r);padding:12px}
+.pl-img{position:relative;border-radius:10px;overflow:hidden;min-height:440px}
+.pl-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s var(--ease)}
+.pl-img .badge{position:absolute;left:14px;bottom:14px;z-index:2;font-size:.76rem;font-weight:600;padding:.4rem .7rem;border-radius:6px;background:rgba(250,249,245,.9)}
+.pl-txt{padding:clamp(1.4rem,3vw,2.6rem);display:flex;flex-direction:column;justify-content:center;transition:opacity .35s,transform .45s var(--ease)}
+.pl-txt.swap{opacity:0;transform:translateY(10px)}
+.pl-txt .over{color:var(--green)}
+.pl-txt h3{margin:.9rem 0 1rem}
+.pl-txt p{color:var(--ink-soft);margin-bottom:1.3rem}
+.check{display:flex;gap:.6rem;align-items:center;font-size:.9rem;font-weight:500;margin-bottom:2rem}
+.check svg{width:18px;height:18px;color:var(--green)}
+.pl-act{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+.pl-act a.help{font-size:.88rem;font-weight:500;text-decoration:underline;text-underline-offset:4px;color:var(--ink-soft)}
 
-/* HERO SOCIAL PROOF */
-.proof{display:flex;align-items:center;justify-content:center;gap:.9rem;margin-top:1.6rem;font-size:.85rem;color:rgba(255,255,255,.7)}
-.proof .av{display:flex}
-.proof .av i{width:32px;height:32px;border-radius:50%;border:2px solid var(--ink);margin-left:-9px;display:grid;place-items:center;font-style:normal;font-size:.72rem;font-weight:700;color:#1B1206}
-.proof .av i:first-child{margin-left:0}
-.proof b{color:#fff}
+/* INCLUDED (dark) */
+.inc{background:var(--green-d);color:#fff;border-radius:var(--r);margin:0 8px}
+.inc .sec-head p{color:rgba(255,255,255,.72)}
+.inc-card{display:grid;grid-template-columns:1.1fr 1fr;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:12px}
+.inc-vis{position:relative;border-radius:10px;background:linear-gradient(160deg,#F5F3EC,#E3E1D8);min-height:460px;overflow:hidden}
+.inc-vis svg.art{position:absolute;inset:0;width:100%;height:100%}
+.hot{position:absolute;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;background:var(--sun);color:var(--green-dd);font-family:var(--head);font-weight:700;font-size:.85rem;display:grid;place-items:center;box-shadow:0 0 0 6px rgba(242,167,46,.25);transition:transform .3s,box-shadow .3s;z-index:2}
+.hot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--sun);opacity:0;animation:ping 2.2s infinite}
+.hot.on{background:var(--green-d);color:#fff;box-shadow:0 0 0 6px rgba(10,61,43,.2)}
+.hot.on::after{border-color:var(--green-d)}
+@keyframes ping{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.inc-txt{padding:clamp(1.4rem,3vw,2.6rem);display:flex;flex-direction:column;justify-content:center}
+.inc-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2rem}
+.inc-chip{font-family:var(--head);font-size:.8rem;font-weight:600;padding:.5rem .85rem;border-radius:7px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);transition:.3s}
+.inc-chip.on{background:#fff;color:var(--green-d);border-color:#fff}
+.inc-body{transition:opacity .35s,transform .45s var(--ease)}
+.inc-body.swap{opacity:0;transform:translateY(10px)}
+.inc-body h3{margin-bottom:.9rem}
+.inc-body p{color:rgba(255,255,255,.75);max-width:44ch}
 
-/* Highlighter (Monodrift-like) */
-.mark{background:linear-gradient(120deg,var(--sun-2),var(--sun));color:var(--ink);padding:0 .14em;border-radius:.12em;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-style:normal}
+/* LIFESTYLE */
+.life{margin:8px;border-radius:var(--r);position:relative;overflow:hidden;min-height:min(92svh,820px);display:flex;align-items:flex-end;color:#fff}
+.life img{position:absolute;inset:0;width:100%;height:115%;object-fit:cover;will-change:transform}
+.life::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,20,14,.72),rgba(5,20,14,.1) 55%)}
+.life-in{position:relative;z-index:2;padding:clamp(1.6rem,4vw,3.4rem);display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;width:100%;flex-wrap:wrap}
+.life-in p{max-width:36ch;color:rgba(255,255,255,.85)}
 
-/* A DAY WITH THE SUN */
-.day{background:var(--ink);color:#fff;padding:clamp(5rem,10vw,9rem) 0;border-top:1px solid var(--line-d)}
-.day-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
-.day-head .lead{color:var(--muted-d);max-width:42ch}
-.day-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(1.2rem,3vw,2.4rem);align-items:stretch}
-.scene-card{position:relative;border-radius:32px;overflow:hidden;border:1px solid var(--line-d);background:#0A0D12}
-.scene{width:100%;height:auto;display:block}
-.scene .t{opacity:0;transition:opacity 1.1s var(--ease)}
-.day[data-s="m"] .scene .m,.day[data-s="d"] .scene .d,.day[data-s="e"] .scene .e,.day[data-s="n"] .scene .n{opacity:1}
-.day[data-s="m"] .pvglow{opacity:.14}.day[data-s="d"] .pvglow{opacity:.5}.day[data-s="e"] .pvglow{opacity:.08}
-.pvglow{opacity:0;transition:opacity 1.1s var(--ease)}
-.sun-g{transition:transform 1.4s var(--ease),opacity 1s}
-.clock{position:absolute;left:18px;top:18px;padding:.5rem .9rem;border-radius:14px;background:rgba(10,13,18,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);font-family:var(--serif);font-weight:300;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.03em;line-height:1}
-.clock small{font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;color:var(--muted-d);margin-left:.4rem;text-transform:uppercase}
-.day-panel{display:flex;flex-direction:column;justify-content:center;transition:opacity .35s,transform .35s var(--ease)}
-.day-panel.swap{opacity:0;transform:translateY(10px)}
-.day-panel h3{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.05;letter-spacing:-.03em;margin:1rem 0}
-.day-panel p{color:var(--muted-d);font-size:1.02rem}
-.day-k{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d);border-radius:18px;overflow:hidden;margin-top:2rem}
-.day-k div{background:var(--ink-2);padding:1rem}
-.day-k b{display:block;font-size:1.25rem;font-weight:600;letter-spacing:-.02em}
-.day-k span{font-size:.74rem;color:var(--muted-d);line-height:1.3;display:block;margin-top:.2rem}
-.day-tabs{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
-.day-tab{text-align:left;padding:1rem 1.1rem;border-radius:16px;border:1px solid var(--line-d);color:var(--muted-d);position:relative;overflow:hidden;transition:background .3s,color .3s}
-.day-tab b{display:block;font-family:var(--serif);font-weight:400;font-size:1.3rem;color:inherit;letter-spacing:-.02em}
-.day-tab span{font-size:.8rem}
-.day-tab:hover{color:#fff}
-.day-tab.on{background:rgba(255,255,255,.06);color:#fff}
-.day-tab i{position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--sun),var(--sun-2))}
-.day-tab.on.play i{animation:fillbar 7s linear forwards}
-.day-tab.on.static i{width:100%}
-@keyframes fillbar{to{width:100%}}
-@media (max-width:860px){
-  .day-grid{grid-template-columns:1fr}
-  .day-tabs{grid-row:2}
-}
-@media (max-width:560px){
-  .day-tab{padding:.8rem .7rem}
-  .day-tab b{font-size:1.05rem}
-  .day-tab span{font-size:.7rem}
-  .day-k b{font-size:1.05rem}
-  .proof{flex-direction:column;gap:.5rem}
-}
+/* SAVINGS */
+.sav-card{display:grid;grid-template-columns:1fr 1.15fr;gap:12px}
+.sav-l,.sav-r{background:var(--card);border-radius:var(--r);padding:clamp(1.4rem,3vw,2.4rem)}
+.sav-l{background:var(--green-d);color:#fff;display:flex;flex-direction:column}
+.sav-l label{font-size:.85rem;color:rgba(255,255,255,.7)}
+.bill{font-family:var(--head);font-weight:500;font-size:clamp(3rem,6vw,4.6rem);letter-spacing:-.06em;line-height:1.05;margin-top:.3rem}
+.bill small{font-size:.38em;letter-spacing:0;margin-right:.3rem;opacity:.7}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--sun) var(--p,10%),rgba(255,255,255,.18) var(--p,10%));margin:1.4rem 0 .5rem;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:6px solid var(--sun);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:6px solid var(--sun)}
+.range-l{display:flex;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.55)}
+.sav-res{margin-top:auto;padding-top:2rem}
+.sav-res small{font-size:.85rem;color:rgba(255,255,255,.7)}
+.sav-res b{display:block;font-family:var(--head);font-weight:600;font-size:clamp(2.4rem,4.6vw,3.6rem);letter-spacing:-.06em;line-height:1.1;color:var(--sun)}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);border-radius:10px;overflow:hidden;margin-top:1.6rem}
+.kp div{background:var(--green-d);padding:.9rem .4rem .2rem 0}
+.kp div+div{padding-left:.9rem}
+.kp b{display:block;font-family:var(--head);font-size:1.15rem;font-weight:600;letter-spacing:-.03em}
+.kp span{font-size:.72rem;color:rgba(255,255,255,.6)}
+.cmp-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.4rem;gap:1rem}
+.cmp-h b{font-family:var(--head);font-size:1.15rem;letter-spacing:-.03em}
+.legend{display:flex;gap:1rem;font-size:.75rem;color:var(--ink-soft)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+.cmp{padding:1.1rem 0;border-top:1px solid var(--line)}
+.cmp-t{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.65rem}
+.cmp-t span{font-family:var(--head);font-weight:600;letter-spacing:-.02em}
+.cmp-t em{font-style:normal;font-family:var(--head);font-weight:700;color:var(--green);font-size:.95rem;white-space:nowrap}
+.bars{display:grid;gap:5px}
+.bar{display:grid;grid-template-columns:1fr 92px;gap:.8rem;align-items:center;font-size:.76rem;color:var(--ink-soft)}
+.bar .tr{height:8px;border-radius:8px;background:var(--card-2);overflow:hidden}
+.bar .tr i{display:block;height:100%;border-radius:8px;width:0;transition:width 1.2s var(--ease)}
+.bar.no i{background:#A7AEA9}
+.bar.yes i{background:var(--sun)}
+.bar span{text-align:right}
 
-/* SIMULATOR */
-.sim{background:var(--ink);color:#fff;padding:clamp(5rem,10vw,9rem) 0;position:relative;overflow:hidden}
-.sim::before{content:"";position:absolute;right:-20%;top:-30%;width:70vw;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(242,163,58,.22),transparent 60%);pointer-events:none}
-.sim-head{text-align:center;margin-bottom:3.5rem;position:relative}
-.sim-head .lead{color:var(--muted-d);margin:1.2rem auto 0}
-.sim-card{position:relative;display:grid;grid-template-columns:1fr 1.15fr;gap:0;border-radius:32px;background:linear-gradient(160deg,var(--ink-3),var(--ink-2));border:1px solid var(--line-d);overflow:hidden}
-.sim-in{padding:clamp(1.6rem,4vw,3rem);border-right:1px solid var(--line-d)}
-.sim-out{padding:clamp(1.6rem,4vw,3rem)}
-.sim label{display:block;font-size:.85rem;color:var(--muted-d);margin-bottom:.6rem}
-.bill{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6vw,4.6rem);letter-spacing:-.04em;line-height:1}
-.bill small{font-size:.4em;color:var(--muted-d);letter-spacing:0;margin-right:.2em;vertical-align:.9em}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--sun) var(--p,30%),rgba(255,255,255,.14) var(--p,30%));margin:1.6rem 0 .6rem;outline:none}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(242,163,58,.3),0 4px 14px rgba(0,0,0,.4);cursor:grab}
-input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 6px rgba(242,163,58,.3)}
-.range-l{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted-d)}
-.seg{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
-.seg button{padding:.6em 1em;border-radius:999px;border:1px solid var(--line-d);font-size:.85rem;color:var(--muted-d);transition:.25s}
-.seg button.on{background:#fff;color:var(--ink);border-color:#fff}
-.sim-note{font-size:.75rem;color:var(--muted-d);margin-top:2rem;line-height:1.5}
-.big-save{font-size:.85rem;color:var(--muted-d)}
-.big-save b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(2.8rem,6vw,4.8rem);letter-spacing:-.04em;line-height:1.05;margin:.3rem 0 .2rem}
-.bars{margin:2rem 0;display:grid;gap:1rem}
-.bar-row{display:grid;grid-template-columns:110px 1fr auto;gap:1rem;align-items:center;font-size:.85rem}
-.bar-row .track{height:12px;border-radius:12px;background:rgba(255,255,255,.07);overflow:hidden}
-.bar-row .fill{height:100%;border-radius:12px;transition:width .8s var(--ease)}
-.fill.before{background:linear-gradient(90deg,#6B7280,#9CA3AF)}
-.fill.after{background:linear-gradient(90deg,var(--sun),var(--sun-2))}
-.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d);border-radius:18px;overflow:hidden}
-.kpis div{background:var(--ink-2);padding:1.1rem 1.2rem}
-.kpis b{display:block;font-size:1.45rem;font-weight:600;letter-spacing:-.02em}
-.kpis span{font-size:.78rem;color:var(--muted-d)}
-
-/* COMPARE */
-.compare{padding:clamp(5rem,10vw,9rem) 0;background:var(--ivory)}
-.compare-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
-.compare-head .lead{max-width:44ch}
-.cmp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.cmp{background:var(--paper);border-radius:var(--r);padding:clamp(1.4rem,3vw,2.2rem);border:1px solid var(--line);display:flex;flex-direction:column}
-.cmp-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.6rem}
-.cmp h3{font-size:1.2rem;font-weight:600;letter-spacing:-.01em}
-.cmp-ico{width:44px;height:44px;border-radius:12px;background:var(--ink);display:grid;place-items:center}
-.cmp-rows{display:grid;gap:1.1rem;margin-bottom:1.6rem}
-.cmp-row{display:grid;gap:.45rem}
-.cmp-row .lbl{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}
-.cmp-row .lbl b{color:var(--text);font-weight:600}
-.cmp-row .tr{height:10px;border-radius:10px;background:var(--ivory-2);overflow:hidden}
-.cmp-row .tr i{display:block;height:100%;border-radius:10px;width:0;transition:width 1.4s var(--ease)}
-.cmp-row.no .tr i{background:#9AA0A8}
-.cmp-row.yes .tr i{background:linear-gradient(90deg,var(--green),var(--green-2))}
-.cmp-foot{margin-top:auto;padding-top:1.2rem;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
-.cmp-foot span{font-size:.85rem;color:var(--muted)}
-.cmp-foot b{white-space:nowrap;font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,5.5vw,1.9rem);letter-spacing:-.03em;color:var(--green)}
-.table-wrap{margin-top:3rem;overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);background:var(--paper)}
-table{width:100%;border-collapse:collapse;min-width:640px;font-size:.95rem}
-th,td{padding:1.05rem 1.3rem;text-align:left;border-bottom:1px solid var(--line)}
-th{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-tr:last-child td{border-bottom:0}
-td.y{color:var(--green);font-weight:600}
-td.n{color:var(--muted)}
-.foot-note{font-size:.78rem;color:var(--muted);margin-top:1rem}
-
-/* JOURNEY */
-.journey{padding:clamp(5rem,10vw,9rem) 0;background:var(--paper)}
-.journey-head{max-width:760px;margin-bottom:4rem}
-.journey-head .lead{margin-top:1.2rem}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:28px;overflow:hidden}
-.step{background:var(--paper);padding:clamp(1.6rem,3vw,2.4rem);position:relative;min-height:260px;display:flex;flex-direction:column;transition:background .4s}
-.step:hover{background:#fff}
-.step .n{font-family:var(--serif);font-size:3.2rem;font-weight:300;line-height:1;color:var(--ivory-2);letter-spacing:-.04em;margin-bottom:auto;transition:color .4s}
-.step:hover .n{color:var(--sun)}
-.step h3{font-size:1.2rem;font-weight:600;margin:1.6rem 0 .5rem;letter-spacing:-.01em}
-.step p{font-size:.95rem;color:var(--muted)}
-.journey-band{margin-top:1.2rem;border-radius:28px;background:var(--green);color:#fff;padding:clamp(1.6rem,4vw,2.6rem);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.journey-band p{font-family:var(--serif);font-weight:300;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.02em;max-width:30ch;line-height:1.2}
-
-/* TRUST */
-.trust{background:var(--ink);color:#fff;padding:clamp(5rem,10vw,8rem) 0}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
-.t-card{border:1px solid var(--line-d);border-radius:var(--r);padding:1.8rem;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent)}
-.t-card b{display:block;font-family:var(--serif);font-weight:300;font-size:2.6rem;letter-spacing:-.04em;line-height:1;margin-bottom:.8rem}
-.t-card p{font-size:.9rem;color:var(--muted-d)}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:4rem}
-.quote{border-radius:var(--r);padding:2rem;background:var(--ink-3);display:flex;flex-direction:column;gap:1.6rem}
-.quote p{font-family:var(--serif);font-weight:300;font-size:1.2rem;line-height:1.4;letter-spacing:-.01em}
-.quote .who{margin-top:auto;display:flex;gap:.8rem;align-items:center;font-size:.85rem;color:var(--muted-d)}
-.quote .who i{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sun),var(--ember));display:grid;place-items:center;font-style:normal;font-weight:700;color:#1B1206}
-.quote .who b{color:#fff;display:block;font-weight:600}
-.stars{color:var(--sun);letter-spacing:.15em;font-size:.9rem}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0 2rem}
+.step{border-top:1px solid var(--line);padding:1.6rem 0 2.6rem}
+.step-t{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.2rem}
+.step-t small{font-size:.75rem;color:var(--ink-soft)}
+.step-t span{width:40px;height:40px;border-radius:50%;background:var(--sun);display:grid;place-items:center;color:var(--green-dd)}
+.step-t span svg{width:18px;height:18px}
+.step h3{font-family:var(--head);font-size:1.35rem;font-weight:600;letter-spacing:-.045em;margin-bottom:.5rem}
+.step p{color:var(--ink-soft);font-size:.93rem;max-width:34ch}
+.promise{margin-top:1rem;display:flex;align-items:center;gap:1.4rem;padding:1.4rem 1.6rem;border-radius:var(--r);background:var(--sun-pale);border:1px solid rgba(242,167,46,.35)}
+.promise img{width:44px;height:44px}
+.promise p{font-family:var(--head);font-weight:500;font-size:clamp(1.05rem,1.6vw,1.3rem);letter-spacing:-.03em}
 
 /* FAQ */
-.faq{padding:clamp(5rem,10vw,9rem) 0;background:var(--paper)}
-.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,6vw,6rem)}
-details{border-bottom:1px solid var(--line);padding:1.4rem 0}
+.faq-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(2rem,6vw,6rem)}
+.faq-grid .muted{margin:1.4rem 0 1.6rem;max-width:30ch}
+details{border-bottom:1px solid var(--line)}
 details:first-child{border-top:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1.5rem;font-weight:600;font-size:1.08rem;letter-spacing:-.01em}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.35rem 0;font-family:var(--head);font-weight:600;font-size:1.05rem;letter-spacing:-.025em}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--serif);font-weight:300;font-size:1.6rem;line-height:1;color:var(--muted);transition:transform .3s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{color:var(--muted);margin-top:.9rem;max-width:62ch}
+summary svg{width:18px;height:18px;flex:none;transition:transform .35s var(--ease);color:var(--ink-soft)}
+details[open] summary svg{transform:rotate(180deg)}
+details p{color:var(--ink-soft);padding:0 0 1.4rem;max-width:62ch}
 
-/* CTA */
-.cta{position:relative;background:var(--ink);color:#fff;padding:clamp(5rem,12vw,10rem) 0;overflow:hidden}
-.cta::before{content:"";position:absolute;left:50%;bottom:-70%;width:min(140vw,1400px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(242,163,58,.55),rgba(224,102,43,.2) 30%,transparent 58%);pointer-events:none}
-.cta-grid{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
-.cta .lead{color:rgba(255,255,255,.72);margin:1.4rem 0 2rem}
-.cta-list{list-style:none;display:grid;gap:.6rem;color:rgba(255,255,255,.8);font-size:.95rem}
-.cta-list li::before{content:"—";color:var(--sun);margin-right:.6rem}
-form.lead-form{background:rgba(255,255,255,.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--line-d);border-radius:28px;padding:clamp(1.4rem,3vw,2.2rem);display:grid;gap:.9rem}
-form.lead-form h3{font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem}
-.field{display:grid;gap:.35rem}
-.field label{font-size:.78rem;color:var(--muted-d)}
-.field input,.field select{width:100%;padding:.95em 1.1em;border-radius:14px;border:1px solid var(--line-d);background:rgba(10,13,18,.55);color:#fff;font:inherit;font-size:.98rem;outline:none;transition:border-color .25s}
-.field input:focus,.field select:focus{border-color:var(--sun)}
-.field select option{color:#000}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-form .btn{justify-content:center;margin-top:.4rem}
-.form-note{font-size:.75rem;color:var(--muted-d);text-align:center}
+/* CTA YELLOW */
+.cta{margin:8px;border-radius:var(--r);background:var(--sun);padding:clamp(3rem,7vw,6rem) clamp(1.6rem,5vw,4.5rem);display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:center;position:relative;overflow:hidden}
+.cta h2{color:var(--green-dd);font-size:clamp(3rem,7vw,6.2rem);letter-spacing:-.075em;line-height:1}
+.cta-r{display:grid;gap:1.4rem;justify-items:start;color:var(--green-dd);position:relative;z-index:1}
+.cta-r small{font-size:.8rem;color:var(--green-d)}
+.cta-sun{position:absolute;right:-90px;top:-90px;width:300px;opacity:.16;animation:spin 80s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:clamp(2rem,5vw,5rem)}
+.f-steps{list-style:none;margin:2rem 0 1.4rem;display:grid;gap:.2rem}
+.f-steps li{display:flex;gap:1rem;align-items:center;padding:.55rem 0;font-family:var(--head);font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:color .3s}
+.f-steps li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;border:1px solid var(--line);transition:.3s}
+.f-steps li.on{color:var(--ink)}
+.f-steps li.on span{background:var(--sun);border-color:var(--sun);color:var(--green-dd)}
+.f-steps li.done span{background:var(--green-d);border-color:var(--green-d);color:#fff}
+.direct{margin-top:2.4rem;padding:1.4rem;border-radius:var(--r);background:var(--card)}
+.direct b{font-family:var(--head);font-size:1.05rem;letter-spacing:-.02em}
+.direct p{font-size:.88rem;color:var(--ink-soft);margin:.3rem 0 1rem}
+.direct a,.direct span{display:flex;gap:.6rem;align-items:center;font-size:.9rem;padding:.25rem 0}
+.direct svg{width:16px;height:16px;color:var(--green)}
+.f-card{background:var(--card);border-radius:var(--r);padding:clamp(1.2rem,3vw,2rem);display:flex;flex-direction:column;min-height:560px}
+.f-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.6rem;font-size:.8rem;color:var(--ink-soft)}
+.f-head b{font-family:var(--head);color:var(--ink);font-size:.95rem}
+.f-pane{display:none}
+.f-pane.on{display:block;animation:fadeUp .5s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.f-pane h3{font-family:var(--head);font-size:1.6rem;font-weight:600;letter-spacing:-.05em}
+.f-pane > p{color:var(--ink-soft);font-size:.92rem;margin:.3rem 0 1.4rem}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative;text-align:left;border-radius:10px;background:#fff;border:1.5px solid transparent;overflow:hidden;transition:border-color .25s,transform .3s var(--ease)}
+.opt:hover{transform:translateY(-2px)}
+.opt.on{border-color:var(--green-d)}
+.opt .oi{aspect-ratio:16/7;background:var(--card-2);overflow:hidden}
+.opt .oi img{width:100%;height:100%;object-fit:cover}
+.opt .oi.q{display:grid;place-items:center;font-family:var(--head);font-size:2rem;color:var(--ink-soft)}
+.opt .ot{padding:.75rem .9rem}
+.opt .ot b{display:block;font-family:var(--head);font-size:.95rem;letter-spacing:-.02em}
+.opt .ot span{font-size:.78rem;color:var(--ink-soft)}
+.opt .tick{position:absolute;top:10px;right:10px;width:24px;height:24px;border-radius:50%;background:var(--green-d);color:#fff;display:grid;place-items:center;opacity:0;transform:scale(.6);transition:.25s}
+.opt.on .tick{opacity:1;transform:none}
+.opt .tick svg{width:13px;height:13px}
+.opt-ico{display:flex;gap:.9rem;align-items:center;padding:1rem}
+.opt-ico .ic{width:42px;height:42px;border-radius:10px;background:var(--sun-pale);display:grid;place-items:center;color:var(--green);flex:none}
+.opt-ico .ic svg{width:20px;height:20px}
+.bill-pick{background:#fff;border-radius:10px;padding:1.4rem}
+.bill-pick .v{font-family:var(--head);font-size:2.6rem;font-weight:600;letter-spacing:-.06em}
+.bill-pick input[type=range]{background:linear-gradient(90deg,var(--sun) var(--p,10%),var(--card-2) var(--p,10%))}
+.bill-pick .range-l{color:var(--ink-soft)}
+.presets{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
+.presets button{font-size:.8rem;padding:.45rem .8rem;border-radius:7px;border:1px solid var(--line);background:#fff;font-weight:500}
+.presets button:hover{border-color:var(--ink)}
+.fields{display:grid;gap:10px}
+.fld{display:grid;gap:.35rem}
+.fld label{font-size:.8rem;font-weight:500;color:var(--ink-soft)}
+.fld input{width:100%;padding:.95rem 1rem;border-radius:9px;border:1.5px solid transparent;background:#fff;font:inherit;color:var(--ink);outline:none;transition:border-color .25s}
+.fld input:focus{border-color:var(--sun)}
+.fld input.err{border-color:#C2410C}
+.f-foot{margin-top:auto;padding-top:1.6rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.f-foot .back{font-family:var(--head);font-weight:600;font-size:.88rem;color:var(--ink-soft)}
+.f-foot .back[hidden]{display:inline;visibility:hidden}
+.f-foot small{font-size:.78rem;color:var(--ink-soft)}
+.f-note{font-size:.75rem;color:var(--ink-soft);margin-top:1rem}
+.f-done{text-align:center;padding:3rem 1rem}
+.f-done .ok{width:64px;height:64px;border-radius:50%;background:var(--sun);display:grid;place-items:center;margin:0 auto 1.2rem;color:var(--green-dd)}
 
 /* FOOTER */
-footer{background:var(--ink);color:var(--muted-d);border-top:1px solid var(--line-d);padding:3.5rem 0 2rem;font-size:.88rem}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2rem;margin-bottom:3rem}
-.foot-grid h4{color:#fff;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem;font-weight:600}
-.foot-grid ul{list-style:none;display:grid;gap:.55rem}
-.foot-grid a:hover{color:#fff}
-.foot-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.6rem;border-top:1px solid var(--line-d);font-size:.78rem}
+footer{padding:clamp(3.5rem,7vw,5.5rem) 0 2rem}
+.ft{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:2rem;align-items:start}
+.ft img{height:52px;width:auto}
+.ft h4{font-family:var(--head);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.9rem}
+.ft ul{list-style:none;display:grid;gap:.45rem;font-size:.92rem}
+.ft ul a:hover{color:var(--green)}
+.ft .tag{font-family:var(--head);font-weight:500;font-size:1.15rem;letter-spacing:-.03em;line-height:1.35;margin-top:1.2rem;max-width:20ch}
+.fb{padding-right:72px;margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--ink-soft)}
 
-/* Floating WhatsApp */
-.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .3s var(--ease)}
+/* floating whatsapp */
+.wa{position:fixed;right:18px;bottom:18px;z-index:40;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(37,211,102,.7);transition:transform .3s var(--ease)}
 .wa:hover{transform:scale(1.07)}
 
-/* Reveal */
-.rv{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.in{opacity:1;transform:none}
-.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.h1 .ln{display:block;overflow:hidden}
+.h1 .ln > span{display:inline-block;transform:translateY(105%);transition:transform 1.1s var(--ease)}
+.loaded .h1 .ln > span{transform:none}
+.loaded .h1 .ln:nth-child(2) > span{transition-delay:.1s}
 
 /* RESPONSIVE */
-@media (max-width:1024px){
-  .trust-grid{grid-template-columns:repeat(2,1fr)}
-  .quotes{grid-template-columns:1fr}
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .foot-grid{grid-template-columns:1fr 1fr}
+@media (max-width:1180px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:1fr 1fr}
 }
-@media (max-width:860px){
-  .nav-links,.nav .nav-cta{display:none}
-  .burger{display:block}
-  .mobile-menu{display:grid;position:fixed;inset:68px 0 auto 0;background:rgba(10,13,18,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:1rem 20px 2rem;gap:.2rem;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.35s var(--ease);border-bottom:1px solid var(--line-d)}
-  .mobile-menu a{color:#fff;font-size:1.4rem;font-family:var(--serif);font-weight:300;padding:.7rem 0;border-bottom:1px solid var(--line-d)}
-  .mobile-menu .btn{margin-top:1.2rem;justify-content:center;font-family:var(--sans);font-size:1rem;border:0}
-  .nav.open .mobile-menu{transform:none;opacity:1;pointer-events:auto}
-  .nav.open{background:rgba(10,13,18,.96)}
-  .prod-grid,.sim-card,.faq-grid,.cta-grid{grid-template-columns:1fr}
-  .prod:nth-child(even) .prod-visual{order:0}
-  .prod-visual{aspect-ratio:4/3.4}
-  .sim-in{border-right:0;border-bottom:1px solid var(--line-d)}
-  .cmp-grid{grid-template-columns:1fr}
-  .hero-stats{grid-template-columns:repeat(2,1fr)}
-  .hero-stats div{padding-bottom:1rem}
+@media (max-width:960px){
+  .nav-links,.nav-r .btn{display:none}
+  .nav-in{grid-template-columns:1fr auto}
+  .menu-btn{display:block}
+  .m-menu{display:grid;position:fixed;inset:76px 0 auto;background:var(--bg);padding:.5rem 24px 1.6rem;gap:0;opacity:0;transform:translateY(-8px);pointer-events:none;transition:.35s var(--ease);box-shadow:0 20px 40px -20px rgba(0,0,0,.2)}
+  .m-menu a{font-family:var(--head);font-size:1.5rem;font-weight:500;letter-spacing:-.04em;padding:.75rem 0;border-bottom:1px solid var(--line)}
+  .m-menu .btn{margin-top:1.2rem;justify-content:center;border:0;font-size:1rem;letter-spacing:0}
+  .nav.open .m-menu{opacity:1;transform:none;pointer-events:auto}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-y{min-height:0;padding-top:2rem}
+  .hero-y h1{margin-top:3.5rem}
+  .hero-img{min-height:560px}
+  .intro-top,.faq-grid,.form-grid,.cta{grid-template-columns:1fr}
+  .trio{grid-template-columns:1fr;gap:1.4rem}
+  .pl-card,.inc-card,.sav-card{grid-template-columns:1fr}
+  .pl-img{min-height:300px}
+  .inc-vis{min-height:380px}
+  .steps{grid-template-columns:1fr 1fr}
 }
-@media (max-width:560px){
-  .wrap{width:calc(100% - 32px)}
+@media (max-width:620px){
+  .wrap,.day-in{width:calc(100% - 32px)}
+  .nav-in{width:calc(100% - 24px)}
+  .cards{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
-  .step{min-height:0}
-  .specs{grid-template-columns:1fr 1fr 1fr}
-  .specs span{font-size:.72rem}
-  .trust-grid{grid-template-columns:1fr}
-  .row2{grid-template-columns:1fr}
-  .bar-row{grid-template-columns:80px 1fr auto;gap:.6rem}
-  .foot-grid{grid-template-columns:1fr}
-  .hero-ctas .btn{width:100%;justify-content:center}
-  .journey-band .btn{width:100%;justify-content:center}
+  .step{padding-bottom:1.8rem}
+  .step-t{margin-bottom:1.2rem}
+  .feat{grid-template-columns:1fr}
+  .hero-img{min-height:520px}
+  .opts{grid-template-columns:1fr 1fr}
+  .ft{grid-template-columns:1fr}
+  .day-bar{margin-top:2rem}
+  .tab small{display:none}
+  .tabs{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+  .tab{justify-content:center;padding:.7rem .3rem;font-size:.8rem}
+  .kp{grid-template-columns:1fr 1fr 1fr}
+  .kp b{font-size:1rem}
+  .bar{grid-template-columns:1fr 78px}
+  .promise{flex-direction:column;align-items:flex-start;gap:.8rem}
+  .hero-y .btn{width:100%;justify-content:space-between}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
+  .h1 .ln > span{transform:none}
 }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-right" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6.2 10.3l2.5 2.4 5-5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 15c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 19c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 11V5a2 2 0 0 1 4 0M14 11V5a2 2 0 0 1 4 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 17h16M3.5 17l1.6-5.4A2 2 0 0 1 7 10h10a2 2 0 0 1 1.9 1.6L20.5 17v2.5h-17zM7 19.5V21M17 19.5V21M7.5 14h1M15.5 14h1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19zM14 7l3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M7 14.5h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5L15 12l-3-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 6.5l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
 <!-- NAV -->
 <header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a href="#top" class="logo" aria-label="Solução Solar — início">
-      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFCF6E"/><stop offset="1" stop-color="#E0662B"/></linearGradient></defs>
-        <circle cx="16" cy="16" r="7" fill="url(#lg)"/>
-        <g stroke="url(#lg)" stroke-width="1.8" stroke-linecap="round">
-          <path d="M16 2.5v3.5M16 26v3.5M2.5 16H6M26 16h3.5M6.4 6.4l2.5 2.5M23.1 23.1l2.5 2.5M6.4 25.6l2.5-2.5M23.1 8.9l2.5-2.5"/>
-        </g>
-      </svg>
-      <span><b>Solução</b> Solar</span>
-    </a>
+  <div class="nav-in">
+    <a href="#top" class="logo" aria-label="Solução Solar — início"><img src="assets/logo.png" alt="Solução Solar" width="1000" height="305"></a>
     <nav class="nav-links" aria-label="Principal">
-      <a href="#produtos">Soluções</a>
-      <a href="#simulador">Simulador</a>
-      <a href="#comparativo">Comparativo</a>
-      <a href="#jornada">Como funciona</a>
-      <a href="#faq">Dúvidas</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#um-dia">Um dia solar</a>
+      <a href="#economia">Economia</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a href="#contato" class="btn btn-sun nav-cta">Orçamento grátis</a>
-    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+    <div class="nav-r">
+      <a href="#projeto" class="btn btn-sun btn-sm">Fale conosco <svg><use href="#i-arrow"/></svg></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#produtos">Soluções</a>
-    <a href="#simulador">Simulador de economia</a>
-    <a href="#comparativo">Comparativo</a>
-    <a href="#jornada">Como funciona</a>
-    <a href="#faq">Dúvidas</a>
-    <a href="#contato" class="btn btn-sun">Quero meu orçamento grátis</a>
+  <div class="m-menu" id="mMenu">
+    <a href="#solucoes">Soluções</a>
+    <a href="#um-dia">Um dia solar</a>
+    <a href="#economia">Economia</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="#projeto" class="btn btn-sun">Quero meu orçamento grátis <svg><use href="#i-arrow"/></svg></a>
   </div>
 </header>
 
@@ -422,674 +468,442 @@ footer{background:var(--ink);color:var(--muted-d);border-top:1px solid var(--lin
 
 <!-- HERO -->
 <section class="hero">
-  <svg class="hero-rings anim-spin" viewBox="0 0 100 100" aria-hidden="true">
-    <circle cx="50" cy="50" r="49.5" fill="none" stroke="rgba(255,207,110,.25)" stroke-width=".08" stroke-dasharray=".4 1.2"/>
-    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,207,110,.18)" stroke-width=".06"/>
-  </svg>
-  <div class="hero-sun" id="heroSun" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
-
-  <div class="wrap hero-content">
-    <p class="eyebrow rv">Energia solar · Aquecimento · Mobilidade elétrica</p>
-    <h1 class="h-xl rv d1">O sol já paga a sua conta. <em class="i gold">Só falta você.</em></h1>
-    <p class="lead rv d2">Reduza até 95% da conta de luz, aqueça a piscina e o banho sem gastar e carregue o carro elétrico em casa. Do projeto ao pós-venda, cuidamos de tudo para você.</p>
-    <div class="hero-ctas rv d3">
-      <a href="#simulador" class="btn btn-sun">Simular minha economia →</a>
-      <a href="#produtos" class="btn btn-ghost">Conhecer as soluções</a>
-    </div>
-    <!-- Ajuste o número abaixo para o total real de clientes atendidos -->
-    <div class="proof rv d3">
-      <span class="av" aria-hidden="true">
-        <i style="background:#FFCF6E">R</i><i style="background:#F2A33A">A</i><i style="background:#E0662B">F</i><i style="background:#2BD47A">M</i>
-      </span>
-      <span><b>+500 famílias e empresas</b> já economizam com o sol</span>
+  <div class="hero-card hero-y">
+    <p class="over">Energia do sol. Economia de verdade.</p>
+    <h1 class="h1"><span class="ln"><span>O sol</span></span><span class="ln"><span>é <b>seu.</b></span></span></h1>
+    <p class="rv d2">Transforme o seu telhado em energia, água quente e mobilidade elétrica. Com soluções sob medida e alguém do seu lado do projeto ao pós-venda.</p>
+    <div class="rv d3"><a href="#economia" class="btn btn-dark">Simule sua economia <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="hero-foot">
+      <span><svg width="18" height="18"><use href="#i-check"/></svg> Para casas, empresas e propriedades rurais</span>
+      <a href="#intro" aria-label="Rolar para baixo"><svg width="16" height="16"><use href="#i-down"/></svg></a>
     </div>
   </div>
-
-  <div class="wrap hero-stats rv d3">
-    <div><b data-count="95" data-suffix="%">0%</b><span>de economia na conta de luz</span></div>
-    <div><b data-count="25" data-suffix=" anos">0</b><span>de garantia de performance</span></div>
-    <div><b data-count="4" data-prefix="3 a " data-suffix=" anos">0</b><span>de retorno médio do investimento</span></div>
-    <div><b>Ponta a ponta</b><span>do projeto ao pós-venda</span></div>
+  <div class="hero-card hero-img">
+    <img id="heroImg" src="https://images.unsplash.com/photo-1637417494521-78b4d1d33029?auto=format&fit=crop&w=1600&q=75" alt="Casa com painéis solares no telhado ao entardecer" fetchpriority="high">
+    <p class="over">Luz para o que importa.</p>
+    <div class="glass">
+      <div class="glass-top"><b>Sua casa. Sua energia.</b><span>SOLAR / CONFORTO</span></div>
+      <div class="feat">
+        <div><svg><use href="#i-bolt"/></svg>Gere sua própria energia</div>
+        <div><svg><use href="#i-drop"/></svg>Banho quente pelo sol</div>
+        <div><svg><use href="#i-wave"/></svg>Piscina aquecida sem gás</div>
+        <div><svg><use href="#i-car"/></svg>Carro carregado em casa</div>
+      </div>
+    </div>
   </div>
-  <span class="scroll-cue" aria-hidden="true"></span>
 </section>
 
-<!-- SUBNAV -->
-<div class="subnav" id="subnav">
-  <div class="wrap subnav-in">
-    <strong>Soluções</strong>
-    <a href="#fotovoltaica">Fotovoltaica</a>
-    <a href="#piscina">Aquecimento de piscina</a>
-    <a href="#aquecimento">Aquecimento solar</a>
-    <a href="#wallbox">Wallbox</a>
-    <a href="#um-dia">Um dia solar</a>
-    <a href="#simulador">Simulador</a>
-    <a href="#contato" class="btn btn-dark" style="padding:.5em 1.1em;font-size:.82rem;color:#fff;border:0">Orçamento</a>
-  </div>
-</div>
-
-<!-- MANIFESTO -->
-<section class="manifesto">
+<!-- INTRO -->
+<section class="intro" id="intro">
   <div class="wrap">
-    <p class="eyebrow" style="margin-bottom:2rem">Por que solar, por que agora</p>
-    <p id="manifesto">Todos os dias, o sol entrega energia de graça no seu telhado. Quem não aproveita, paga por ela duas vezes: na conta de luz, no gás e no combustível. Nós transformamos essa luz em economia real, com engenharia de precisão e alguém do seu lado em cada etapa.</p>
+    <div class="intro-top">
+      <h2 class="h2 rv">Grande mudança.<br>Começa no telhado.</h2>
+      <div>
+        <p class="big-p rv d1">Você não precisa mudar sua rotina para economizar. Basta deixar o sol trabalhar no lugar certo.</p>
+        <p class="muted rv d2">Com a Solução Solar, seu telhado vira uma pequena usina: projetada sob medida, instalada com cuidado e acompanhada por quem entende, antes, durante e depois da instalação.</p>
+        <a href="#solucoes" class="text-link rv d3">O que combina comigo? <span class="circle-arrow"><svg><use href="#i-right"/></svg></span></a>
+      </div>
+    </div>
+    <div class="trio">
+      <div class="rv"><small>01</small><b>Um telhado ensolarado.</b><p>É tudo de que uma boa ideia precisa para começar.</p></div>
+      <div class="rv d1"><small>02</small><b>A solução certa.</b><p>Equipamentos e projeto que funcionam juntos.</p></div>
+      <div class="rv d2"><small>03</small><b>Mais independência.</b><p>Sua energia, na sua rotina, todos os dias.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- A DAY -->
+<section class="day" id="um-dia" aria-label="Um dia com a Solução Solar">
+  <div class="day-img on" data-s="m"><img src="https://images.unsplash.com/photo-1607273177147-e7304c4d5d6c?auto=format&fit=crop&w=2000&q=70" alt="Cozinha iluminada pelo sol da manhã" loading="lazy"></div>
+  <div class="day-img" data-s="d"><img src="https://images.unsplash.com/photo-1587047643567-24a019cdcb70?auto=format&fit=crop&w=2000&q=70" alt="Piscina ao sol do meio-dia" loading="lazy"></div>
+  <div class="day-img" data-s="e"><img src="https://images.unsplash.com/photo-1732194066720-530c441829c8?auto=format&fit=crop&w=2000&q=70" alt="Homem conectando o carro elétrico ao Wallbox na garagem" loading="lazy"></div>
+  <div class="day-img" data-s="n"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2000&q=70" alt="Casa iluminada à noite" loading="lazy"></div>
+  <div class="day-in">
+    <div class="day-txt" id="dayTxt">
+      <div class="day-time" id="dayTime">06:30<small>h</small></div>
+      <h2 class="h2" id="dayTitle">Seu dia começa.<br>O banho quente também.</h2>
+      <p id="dayText">A água aquecida pelo sol ontem está pronta no reservatório. Banho quente para toda a família, sem o chuveiro elétrico pesando na conta.</p>
+    </div>
+    <div class="day-bar">
+      <div class="tabs" role="tablist" aria-label="Momentos do dia">
+        <button class="tab on" data-s="m" role="tab">Manhã <small>06:30</small><i></i></button>
+        <button class="tab" data-s="d" role="tab">Meio-dia <small>12:00</small><i></i></button>
+        <button class="tab" data-s="e" role="tab">Fim de tarde <small>18:30</small><i></i></button>
+        <button class="tab" data-s="n" role="tab">Noite <small>23:00</small><i></i></button>
+      </div>
+      <span class="day-label">UM DIA. SUA ENERGIA.</span>
+    </div>
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section class="products" id="produtos">
-
-  <!-- 1 Fotovoltaica -->
-  <article class="prod" id="fotovoltaica">
-    <div class="wrap prod-grid">
-      <div class="prod-visual rv">
-        <span class="prod-tag">Mais procurado</span>
-        <svg viewBox="0 0 400 440" aria-label="Ilustração de painéis solares sobre um telhado">
-          <defs>
-            <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B140C"/><stop offset=".6" stop-color="#3A220C"/><stop offset="1" stop-color="#0A0D12"/></linearGradient>
-            <radialGradient id="sun1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE3A3"/><stop offset=".35" stop-color="#F2A33A"/><stop offset="1" stop-color="#E0662B" stop-opacity="0"/></radialGradient>
-            <linearGradient id="cell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E3350"/><stop offset="1" stop-color="#0C1626"/></linearGradient>
-            <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#FFE3A3" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-            <clipPath id="panelClip"><path d="M70 300 L170 170 L380 170 L330 300 Z"/></clipPath>
-          </defs>
-          <rect width="400" height="440" fill="url(#sky1)"/>
-          <circle cx="300" cy="90" r="120" fill="url(#sun1)" class="anim-pulse"/>
-          <circle cx="300" cy="90" r="28" fill="#FFE9B8"/>
-          <!-- roof -->
-          <path d="M30 330 L150 160 L400 160 L400 330 Z" fill="#14100C"/>
-          <path d="M30 330 L150 160 L160 160 L42 330 Z" fill="#2A1F15"/>
-          <!-- panels -->
-          <g clip-path="url(#panelClip)">
-            <path d="M70 300 L170 170 L380 170 L330 300 Z" fill="url(#cell)"/>
-            <g stroke="#5D7BA3" stroke-opacity=".55" stroke-width="1.2">
-              <path d="M95 267.5 L352 267.5"/><path d="M120 235 L364 235"/><path d="M145 202.5 L372 202.5"/>
-              <path d="M115 300 L207 170"/><path d="M160 300 L244 170"/><path d="M205 300 L281 170"/><path d="M250 300 L318 170"/><path d="M290 300 L350 170"/>
-            </g>
-            <rect x="0" y="160" width="160" height="150" fill="url(#shine)" class="anim-shimmer" transform="skewX(-30)"/>
-          </g>
-          <path d="M70 300 L170 170 L380 170 L330 300 Z" fill="none" stroke="#B9C7DA" stroke-opacity=".7" stroke-width="2"/>
-          <rect x="0" y="330" width="400" height="110" fill="#0A0D12"/>
-          <!-- energy flow -->
-          <path d="M330 300 C 330 360, 250 360, 230 400" fill="none" stroke="#F2A33A" stroke-width="2.5" class="anim-flow"/>
-          <g transform="translate(200 380)">
-            <rect width="60" height="40" rx="8" fill="#151B24" stroke="#2A3340"/>
-            <circle cx="16" cy="20" r="5" fill="#2BD47A" class="anim-pulse"/>
-            <rect x="28" y="14" width="22" height="3" rx="1.5" fill="#3A4452"/><rect x="28" y="22" width="16" height="3" rx="1.5" fill="#3A4452"/>
-          </g>
-          <text x="24" y="410" fill="#9AA3B0" font-family="Inter Tight, sans-serif" font-size="11" letter-spacing="1.5">GERAÇÃO HOJE</text>
-          <text x="24" y="430" fill="#fff" font-family="Fraunces, serif" font-size="20">38,4 kWh</text>
-        </svg>
-      </div>
-      <div>
-        <p class="prod-num rv">01</p>
-        <p class="eyebrow rv">Energia solar fotovoltaica</p>
-        <h2 class="h-l rv d1" style="margin-top:.8rem">Sua própria usina. <em class="i">No seu telhado.</em></h2>
-        <p class="lead rv d2">Painéis de alta eficiência transformam a luz do sol em eletricidade para a sua casa, empresa ou propriedade rural. O excedente vira crédito com a distribuidora por até 5 anos.</p>
-        <div class="specs rv d2">
-          <div><b>até 95%</b><span>menos na conta de luz</span></div>
-          <div><b>3–5 anos</b><span>para o sistema se pagar</span></div>
-          <div><b>25+ anos</b><span>de vida útil dos painéis</span></div>
-        </div>
-        <ul class="checks rv d3">
-          <li>Projeto sob medida a partir do seu consumo real e do sombreamento do telhado</li>
-          <li>Homologação completa junto à distribuidora, sem burocracia para você</li>
-          <li>Monitoramento da geração pelo celular, em tempo real</li>
-          <li>Valoriza o imóvel e protege você dos reajustes da tarifa</li>
-        </ul>
-        <div class="prod-actions rv d3">
-          <a href="#contato" data-interest="Energia solar fotovoltaica" class="btn btn-dark">Quero gerar minha energia</a>
-          <a href="#simulador" class="link-arrow">Simular economia <span>→</span></a>
-        </div>
-      </div>
+<section class="sec" id="solucoes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 rv">Para cada casa.<br>E cada plano.</h2>
+      <p class="muted rv d1">Da conta de luz ao banho quente, da piscina ao carro elétrico. Descubra a solução que combina com a sua rotina, ou junte todas.</p>
     </div>
-  </article>
-
-  <!-- 2 Piscina -->
-  <article class="prod" id="piscina">
-    <div class="wrap prod-grid">
-      <div class="prod-visual rv">
-        <span class="prod-tag">Piscina aquecida o ano todo</span>
-        <svg viewBox="0 0 400 440" aria-label="Ilustração de piscina aquecida por coletores solares">
-          <defs>
-            <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1A22"/><stop offset="1" stop-color="#0A0D12"/></linearGradient>
-            <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1CB5C9"/><stop offset="1" stop-color="#0B4F66"/></linearGradient>
-            <linearGradient id="col" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#151515"/><stop offset=".5" stop-color="#2A2A2A"/><stop offset="1" stop-color="#151515"/></linearGradient>
-            <clipPath id="poolClip"><rect x="30" y="250" width="340" height="150" rx="18"/></clipPath>
-          </defs>
-          <rect width="400" height="440" fill="url(#sky2)"/>
-          <circle cx="80" cy="70" r="90" fill="#F2A33A" opacity=".18"/>
-          <circle cx="80" cy="70" r="24" fill="#FFD68A"/>
-          <!-- collectors on roof -->
-          <g transform="translate(150 70)">
-            <path d="M0 110 L50 0 L220 0 L220 110 Z" fill="#1A1410"/>
-            <g>
-              <rect x="40" y="18" width="170" height="78" rx="4" fill="url(#col)" transform="skewX(-20)" />
-              <g stroke="#3D3D3D" stroke-width="2" transform="skewX(-20)">
-                <path d="M54 18v78M68 18v78M82 18v78M96 18v78M110 18v78M124 18v78M138 18v78M152 18v78M166 18v78M180 18v78M194 18v78"/>
-              </g>
-            </g>
-          </g>
-          <!-- pipes -->
-          <path d="M330 180 L330 230 L360 230 L360 270" fill="none" stroke="#E0662B" stroke-width="3" class="anim-flow"/>
-          <path d="M175 180 L175 225 L60 225 L60 270" fill="none" stroke="#1CB5C9" stroke-width="3" class="anim-flow" style="animation-direction:reverse"/>
-          <!-- pool -->
-          <rect x="22" y="242" width="356" height="166" rx="24" fill="#E9E1D2"/>
-          <g clip-path="url(#poolClip)">
-            <rect x="30" y="250" width="340" height="150" fill="url(#water)"/>
-            <g class="anim-wave" fill="none" stroke="#9DF1FF" stroke-opacity=".5" stroke-width="2">
-              <path d="M30 290 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"/>
-              <path d="M30 330 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"/>
-              <path d="M30 370 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0"/>
-            </g>
-          </g>
-          <!-- steam -->
-          <g stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none" stroke-linecap="round">
-            <path class="anim-rise" d="M120 245 q-6 -10 0 -20 t0 -20"/>
-            <path class="anim-rise" style="animation-delay:1s" d="M200 245 q-6 -10 0 -20 t0 -20"/>
-            <path class="anim-rise" style="animation-delay:2s" d="M280 245 q-6 -10 0 -20 t0 -20"/>
-          </g>
-          <g transform="translate(250 268)">
-            <rect width="104" height="52" rx="14" fill="rgba(10,13,18,.6)" stroke="rgba(255,255,255,.2)"/>
-            <text x="14" y="21" fill="#BFEFF5" font-family="Inter Tight, sans-serif" font-size="9" letter-spacing="1.3">ÁGUA</text>
-            <text x="14" y="42" fill="#fff" font-family="Fraunces, serif" font-size="20">29 °C</text>
-          </g>
-        </svg>
-      </div>
-      <div>
-        <p class="prod-num rv">02</p>
-        <p class="eyebrow rv">Aquecimento de piscina</p>
-        <h2 class="h-l rv d1" style="margin-top:.8rem">Água na temperatura certa. <em class="i">Conta zerada.</em></h2>
-        <p class="lead rv d2">Coletores solares específicos para piscina mantêm a água agradável em boa parte do ano, sem gás e sem bomba de calor ligada o dia inteiro. Mais meses de uso, nenhum custo de aquecimento.</p>
-        <div class="specs rv d2">
-          <div><b>+6 °C</b><span>em média acima da água sem aquecimento</span></div>
-          <div><b>R$ 0</b><span>de custo mensal para aquecer</span></div>
-          <div><b>+5 meses</b><span>de piscina em uso por ano</span></div>
+    <div class="cards">
+      <article class="pcard hl rv">
+        <div class="pc-top"><span>O MAIS PROCURADO</span><span>01</span></div>
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?auto=format&fit=crop&w=900&q=75" alt="Painéis solares no telhado de uma casa" loading="lazy"><a href="#projeto" data-interest="luz" class="circle-arrow" aria-label="Quero energia solar"><svg><use href="#i-arrow"/></svg></a></div>
+        <div class="pc-body">
+          <h3>Energia Solar</h3>
+          <p class="sub">Sua própria usina no telhado.</p>
+          <div class="chips"><span class="chip">Casa, empresa e rural</span><span class="chip">25 anos de garantia</span></div>
+          <div class="pc-foot"><div><small>economia de até</small><b>95%</b></div><a href="#projeto" data-interest="luz">Quero <svg width="14" height="14"><use href="#i-arrow"/></svg></a></div>
         </div>
-        <ul class="checks rv d3">
-          <li>Dimensionamento pelo volume, região e exposição da sua piscina</li>
-          <li>Coletores resistentes a cloro, UV e granizo</li>
-          <li>Controlador digital que liga o aquecimento só quando compensa</li>
-          <li>Pode ser combinado com capa térmica para reter ainda mais calor</li>
-        </ul>
-        <div class="prod-actions rv d3">
-          <a href="#contato" data-interest="Aquecimento de piscina" class="btn btn-dark">Aquecer minha piscina</a>
-          <a href="#comparativo" class="link-arrow">Ver comparativo <span>→</span></a>
+      </article>
+      <article class="pcard rv d1">
+        <div class="pc-top"><span>Lazer</span><span>02</span></div>
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1621437102383-99e5cf9859c7?auto=format&fit=crop&w=900&q=75" alt="Piscina em área externa com jardim" loading="lazy"><a href="#projeto" data-interest="piscina" class="circle-arrow" aria-label="Quero aquecer a piscina"><svg><use href="#i-arrow"/></svg></a></div>
+        <div class="pc-body">
+          <h3>Aquecimento de Piscina</h3>
+          <p class="sub">Água agradável por mais meses.</p>
+          <div class="chips"><span class="chip">Sem gás</span><span class="chip">Controle digital</span></div>
+          <div class="pc-foot"><div><small>custo mensal para aquecer</small><b>R$ 0</b></div><a href="#projeto" data-interest="piscina">Quero <svg width="14" height="14"><use href="#i-arrow"/></svg></a></div>
         </div>
-      </div>
+      </article>
+      <article class="pcard rv d2">
+        <div class="pc-top"><span>Banho</span><span>03</span></div>
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1612367662740-5cb9170a0768?auto=format&fit=crop&w=900&q=75" alt="Aquecedor solar de água com reservatório no telhado" loading="lazy"><a href="#projeto" data-interest="banho" class="circle-arrow" aria-label="Quero aquecimento solar"><svg><use href="#i-arrow"/></svg></a></div>
+        <div class="pc-body">
+          <h3>Aquecimento Solar</h3>
+          <p class="sub">Água quente pelo sol, todos os dias.</p>
+          <div class="chips"><span class="chip">Reservatório térmico</span><span class="chip">Apoio automático</span></div>
+          <div class="pc-foot"><div><small>menos gasto com água quente</small><b>até 80%</b></div><a href="#projeto" data-interest="banho">Quero <svg width="14" height="14"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard rv d3">
+        <div class="pc-top"><span>Mobilidade</span><span>04</span></div>
+        <div class="pc-img"><img src="https://images.unsplash.com/photo-1704474618942-ae933a8edd86?auto=format&fit=crop&w=900&q=75" alt="Carregador Wallbox instalado em parede de madeira" loading="lazy"><a href="#projeto" data-interest="carro" class="circle-arrow" aria-label="Quero instalar Wallbox"><svg><use href="#i-arrow"/></svg></a></div>
+        <div class="pc-body">
+          <h3>Wallbox</h3>
+          <p class="sub">Carregue o carro elétrico em casa.</p>
+          <div class="chips"><span class="chip">Até 7,4 kW</span><span class="chip">Proteção DR + DPS</span></div>
+          <div class="pc-foot"><div><small>por km, com energia solar</small><b>R$ 0,02</b></div><a href="#projeto" data-interest="carro">Quero <svg width="14" height="14"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
     </div>
-  </article>
-
-  <!-- 3 Aquecimento Solar -->
-  <article class="prod" id="aquecimento">
-    <div class="wrap prod-grid">
-      <div class="prod-visual rv">
-        <span class="prod-tag">Banho quente, sem chuveiro elétrico</span>
-        <svg viewBox="0 0 400 440" aria-label="Ilustração de coletor solar e reservatório térmico">
-          <defs>
-            <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22140A"/><stop offset="1" stop-color="#0A0D12"/></linearGradient>
-            <linearGradient id="boiler" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9E4DA"/><stop offset=".5" stop-color="#C9C2B5"/><stop offset="1" stop-color="#8E877B"/></linearGradient>
-            <linearGradient id="tube" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E1520"/><stop offset=".5" stop-color="#3B4E66"/><stop offset="1" stop-color="#0E1520"/></linearGradient>
-            <linearGradient id="hot" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#E0662B"/><stop offset="1" stop-color="#FFCF6E"/></linearGradient>
-          </defs>
-          <rect width="400" height="440" fill="url(#sky3)"/>
-          <circle cx="330" cy="70" r="110" fill="#F2A33A" opacity=".16"/>
-          <circle cx="330" cy="70" r="26" fill="#FFDFA0"/>
-          <!-- boiler -->
-          <g transform="translate(60 90)">
-            <rect width="280" height="70" rx="35" fill="url(#boiler)"/>
-            <rect x="14" y="10" width="252" height="8" rx="4" fill="#fff" opacity=".45"/>
-            <rect x="30" y="30" width="80" height="10" rx="5" fill="#1A1A1A" opacity=".15"/>
-          </g>
-          <!-- tubes -->
-          <g transform="translate(70 170)">
-            <g>
-              <rect x="0" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="27" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="54" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="81" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="108" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="135" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="162" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="189" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="216" y="0" width="20" height="190" rx="10" fill="url(#tube)"/>
-              <rect x="243" y="0" width="17" height="190" rx="8.5" fill="url(#tube)"/>
-            </g>
-            <g fill="url(#hot)" opacity=".85">
-              <rect x="7" y="20" width="6" height="150" rx="3" class="anim-pulse"/>
-              <rect x="34" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:.2s"/>
-              <rect x="61" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:.4s"/>
-              <rect x="88" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:.6s"/>
-              <rect x="115" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:.8s"/>
-              <rect x="142" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:1s"/>
-              <rect x="169" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:1.2s"/>
-              <rect x="196" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:1.4s"/>
-              <rect x="223" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:1.6s"/>
-              <rect x="248" y="20" width="6" height="150" rx="3" class="anim-pulse" style="animation-delay:1.8s"/>
-            </g>
-          </g>
-          <rect x="60" y="358" width="280" height="10" rx="5" fill="#2A3340"/>
-          <g transform="translate(36 384)">
-            <text x="0" y="12" fill="#9AA3B0" font-family="Inter Tight, sans-serif" font-size="11" letter-spacing="1.5">RESERVATÓRIO</text>
-            <text x="0" y="36" fill="#fff" font-family="Fraunces, serif" font-size="20">300 L · 58 °C</text>
-          </g>
-        </svg>
-      </div>
-      <div>
-        <p class="prod-num rv">03</p>
-        <p class="eyebrow rv">Aquecimento solar de água</p>
-        <h2 class="h-l rv d1" style="margin-top:.8rem">Banho quente para a família toda. <em class="i">Por conta do sol.</em></h2>
-        <p class="lead rv d2">O chuveiro elétrico é um dos maiores vilões da conta de luz. Com coletores e reservatório térmico, sua casa tem água quente em chuveiros, pias e cozinha, com pressão e conforto de verdade.</p>
-        <div class="specs rv d2">
-          <div><b>até 80%</b><span>menos energia gasta com água quente</span></div>
-          <div><b>2–3 anos</b><span>para o sistema se pagar</span></div>
-          <div><b>20+ anos</b><span>de vida útil do sistema</span></div>
-        </div>
-        <ul class="checks rv d3">
-          <li>Reservatório térmico que guarda a água quente para a noite e dias nublados</li>
-          <li>Apoio elétrico ou a gás automático para nunca faltar água quente</li>
-          <li>Banho com pressão e temperatura estáveis, sem oscilação</li>
-          <li>Ideal para famílias, condomínios, pousadas e academias</li>
-        </ul>
-        <div class="prod-actions rv d3">
-          <a href="#contato" data-interest="Aquecimento solar de água" class="btn btn-dark">Quero água quente grátis</a>
-          <a href="#comparativo" class="link-arrow">Ver comparativo <span>→</span></a>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <!-- 4 Wallbox -->
-  <article class="prod" id="wallbox">
-    <div class="wrap prod-grid">
-      <div class="prod-visual rv">
-        <span class="prod-tag">Carregue em casa</span>
-        <svg viewBox="0 0 400 440" aria-label="Ilustração de carregador Wallbox na parede">
-          <defs>
-            <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#161C25"/><stop offset="1" stop-color="#0A0D12"/></linearGradient>
-            <linearGradient id="wb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A313C"/><stop offset="1" stop-color="#0F141B"/></linearGradient>
-            <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2BD47A" stop-opacity=".55"/><stop offset="1" stop-color="#2BD47A" stop-opacity="0"/></radialGradient>
-          </defs>
-          <rect width="400" height="440" fill="url(#wall)"/>
-          <g stroke="rgba(255,255,255,.04)"><path d="M0 60H400M0 120H400M0 180H400M0 240H400M0 300H400"/></g>
-          <rect x="0" y="340" width="400" height="100" fill="#07090D"/>
-          <circle cx="200" cy="170" r="150" fill="url(#glow)" class="anim-pulse"/>
-          <!-- wallbox -->
-          <g transform="translate(130 80)">
-            <rect width="140" height="180" rx="34" fill="url(#wb)" stroke="rgba(255,255,255,.12)"/>
-            <rect x="10" y="8" width="120" height="6" rx="3" fill="#fff" opacity=".08"/>
-            <circle cx="70" cy="80" r="34" fill="none" stroke="#2BD47A" stroke-width="4" stroke-dasharray="160 220" stroke-linecap="round" class="anim-spin" style="animation-duration:3s"/>
-            <circle cx="70" cy="80" r="24" fill="#0A0D12"/>
-            <path d="M74 64 L62 84 H72 L66 98 L80 76 H70 Z" fill="#2BD47A"/>
-            <text x="70" y="146" text-anchor="middle" fill="#9AA3B0" font-family="Inter Tight, sans-serif" font-size="10" letter-spacing="1.5">7,4 kW</text>
-          </g>
-          <!-- cable -->
-          <path d="M200 260 C 200 330, 120 300, 100 360 C 90 390, 140 400, 170 380" fill="none" stroke="#1E252F" stroke-width="10" stroke-linecap="round"/>
-          <path d="M200 260 C 200 330, 120 300, 100 360 C 90 390, 140 400, 170 380" fill="none" stroke="#2BD47A" stroke-width="2" class="anim-flow" opacity=".8"/>
-          <g transform="translate(250 360)">
-            <rect width="126" height="56" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/>
-            <text x="14" y="22" fill="#9AA3B0" font-family="Inter Tight, sans-serif" font-size="9" letter-spacing="1.3">BATERIA</text>
-            <text x="14" y="44" fill="#fff" font-family="Fraunces, serif" font-size="20">86%</text>
-            <rect x="66" y="34" width="46" height="8" rx="4" fill="rgba(255,255,255,.12)"/>
-            <rect x="66" y="34" width="40" height="8" rx="4" fill="#2BD47A"/>
-          </g>
-        </svg>
-      </div>
-      <div>
-        <p class="prod-num rv">04</p>
-        <p class="eyebrow rv">Instalação de Wallbox</p>
-        <h2 class="h-l rv d1" style="margin-top:.8rem">Acorde com o carro carregado. <em class="i">Com energia do sol.</em></h2>
-        <p class="lead rv d2">Instalamos o carregador veicular na sua garagem com toda a segurança elétrica que ele exige. Combinado com energia solar, rodar de carro elétrico fica até 10 vezes mais barato que gasolina.</p>
-        <div class="specs rv d2">
-          <div><b>até 5×</b><span>mais rápido que a tomada comum</span></div>
-          <div><b>R$ 0,02</b><span>por km, com energia solar*</span></div>
-          <div><b>100%</b><span>dentro das normas técnicas</span></div>
-        </div>
-        <ul class="checks rv d3">
-          <li>Vistoria do quadro elétrico e dimensionamento do circuito dedicado</li>
-          <li>Proteções DR e DPS para segurança do carro e da casa</li>
-          <li>Compatível com as principais marcas de veículos elétricos e híbridos</li>
-          <li>Opção de programar a recarga e acompanhar pelo aplicativo</li>
-        </ul>
-        <div class="prod-actions rv d3">
-          <a href="#contato" data-interest="Instalação de Wallbox" class="btn btn-dark">Instalar meu Wallbox</a>
-          <a href="#comparativo" class="link-arrow">Ver comparativo <span>→</span></a>
-        </div>
-      </div>
-    </div>
-  </article>
+    <p class="fine">Valores estimados e não vinculantes. A economia real depende do consumo, da região e do projeto, e é confirmada na visita técnica gratuita.</p>
+  </div>
 </section>
 
-<!-- A DAY WITH THE SUN -->
-<section class="day" id="um-dia" data-s="m">
+<!-- PLACES -->
+<section class="sec places" style="padding-top:0">
   <div class="wrap">
-    <div class="day-head">
-      <div>
-        <p class="eyebrow rv">Um dia com a Solução Solar</p>
-        <h2 class="h-l rv d1" style="margin-top:1rem">Quatro soluções. <em class="i gold">Um único sol.</em></h2>
+    <div class="sec-head">
+      <h2 class="h2 rv">Onde o sol vai<br>trabalhar para você?</h2>
+      <div class="pl-tabs rv d1" role="tablist" aria-label="Tipo de imóvel">
+        <button class="pl-tab on" data-p="0" role="tab">Residência</button>
+        <button class="pl-tab" data-p="1" role="tab">Empresa</button>
+        <button class="pl-tab" data-p="2" role="tab">Rural</button>
       </div>
-      <p class="lead rv d2">Veja como energia solar, aquecimento e Wallbox trabalham juntos, do primeiro banho ao carro carregado de madrugada.</p>
     </div>
-
-    <div class="day-grid rv">
-      <div class="scene-card">
-        <svg class="scene" viewBox="0 0 800 460" role="img" aria-label="Casa com energia solar, aquecimento solar, piscina e Wallbox ao longo do dia">
-          <defs>
-            <linearGradient id="skyM" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2140"/><stop offset=".6" stop-color="#C9705A"/><stop offset="1" stop-color="#F6C08A"/></linearGradient>
-            <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E86BF"/><stop offset=".65" stop-color="#9CCBEA"/><stop offset="1" stop-color="#E6F1F6"/></linearGradient>
-            <linearGradient id="skyE" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E1838"/><stop offset=".55" stop-color="#7A3B5C"/><stop offset="1" stop-color="#E0662B"/></linearGradient>
-            <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#04060A"/><stop offset=".7" stop-color="#0B1220"/><stop offset="1" stop-color="#162036"/></linearGradient>
-            <radialGradient id="sunGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE9B8" stop-opacity=".95"/><stop offset=".3" stop-color="#FFCF6E" stop-opacity=".55"/><stop offset="1" stop-color="#F2A33A" stop-opacity="0"/></radialGradient>
-            <linearGradient id="pvg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22395A"/><stop offset="1" stop-color="#0C1626"/></linearGradient>
-          </defs>
-
-          <!-- skies -->
-          <rect class="t m" width="800" height="460" fill="url(#skyM)"/>
-          <rect class="t d" width="800" height="460" fill="url(#skyD)"/>
-          <rect class="t e" width="800" height="460" fill="url(#skyE)"/>
-          <rect class="t n" width="800" height="460" fill="url(#skyN)"/>
-          <g class="t n" fill="#fff">
-            <circle cx="80" cy="60" r="1.2"/><circle cx="160" cy="110" r="1"/><circle cx="260" cy="50" r="1.4"/><circle cx="420" cy="90" r="1"/><circle cx="520" cy="40" r="1.2"/><circle cx="600" cy="130" r="1"/><circle cx="720" cy="70" r="1.3"/><circle cx="340" cy="120" r=".9"/><circle cx="760" cy="160" r="1"/><circle cx="40" cy="150" r="1"/>
-          </g>
-          <!-- moon -->
-          <g class="t n"><circle cx="650" cy="90" r="20" fill="#ECE8DD"/><circle cx="660" cy="83" r="18" fill="#08101C"/></g>
-          <!-- sun -->
-          <g id="sunG" class="sun-g" style="transform:translate(110px,300px)">
-            <circle r="80" fill="url(#sunGlow)"/><circle r="22" fill="#FFE3A3"/>
-          </g>
-
-          <!-- ground -->
-          <rect x="0" y="380" width="800" height="80" fill="#0A0D12"/>
-          <path d="M0 380H800" stroke="#2A3340"/>
-
-          <!-- grid pole + wire -->
-          <rect x="742" y="250" width="5" height="130" fill="#2A3340"/>
-          <rect x="726" y="256" width="38" height="4" rx="2" fill="#2A3340"/>
-          <path d="M744 262 Q 640 290 520 254" fill="none" stroke="#3A4452" stroke-width="1.5"/>
-          <path class="t d anim-flow" d="M520 254 Q 640 290 744 262" fill="none" stroke="#FFCF6E" stroke-width="2.5"/>
-          <path class="t n anim-flow" d="M744 262 Q 640 290 520 254" fill="none" stroke="#7FB4FF" stroke-width="2.5"/>
-          <g class="t d"><rect x="676" y="214" width="96" height="24" rx="12" fill="rgba(10,13,18,.75)"/><text x="724" y="230" text-anchor="middle" fill="#FFCF6E" font-family="Inter Tight, sans-serif" font-size="10" font-weight="600">+ CRÉDITOS</text></g>
-          <g class="t n"><rect x="676" y="214" width="96" height="24" rx="12" fill="rgba(10,13,18,.75)"/><text x="724" y="230" text-anchor="middle" fill="#9CC4FF" font-family="Inter Tight, sans-serif" font-size="10" font-weight="600">USANDO CRÉDITOS</text></g>
-
-          <!-- pool -->
-          <rect x="30" y="368" width="160" height="12" rx="3" fill="#E9E1D2"/>
-          <rect x="36" y="370" width="148" height="10" fill="#127A8C"/>
-          <rect class="t d" x="36" y="370" width="148" height="10" fill="#1CB5C9"/>
-          <g class="t d" stroke="#fff" stroke-opacity=".6" stroke-width="2" fill="none" stroke-linecap="round">
-            <path class="anim-rise" d="M70 364 q-5 -8 0 -16 t0 -16"/>
-            <path class="anim-rise" style="animation-delay:1s" d="M110 364 q-5 -8 0 -16 t0 -16"/>
-            <path class="anim-rise" style="animation-delay:2s" d="M150 364 q-5 -8 0 -16 t0 -16"/>
-          </g>
-          <path class="t d anim-flow" d="M226 236 C 170 260, 120 300, 110 366" fill="none" stroke="#E0662B" stroke-width="2.5"/>
-
-          <!-- house -->
-          <rect x="205" y="242" width="310" height="138" fill="#151B24"/>
-          <path d="M190 242 L255 165 L465 165 L530 242 Z" fill="#1A212B" stroke="#2A3340"/>
-          <!-- solar water heater: boiler + collectors -->
-          <rect x="250" y="146" width="72" height="18" rx="9" fill="#CFC8BA"/>
-          <rect class="t m" x="250" y="146" width="72" height="18" rx="9" fill="#F2A33A" opacity=".55"/>
-          <rect class="t d" x="250" y="146" width="72" height="18" rx="9" fill="#F2A33A" opacity=".55"/>
-          <path d="M212 232 L262 175 L320 175 L290 232 Z" fill="#0F141B"/>
-          <g stroke="#3B4E66" stroke-width="2"><path d="M222 232L270 175M234 232L278 175M246 232L286 175M258 232L294 175M270 232L302 175M282 232L310 175"/></g>
-          <!-- PV -->
-          <path d="M298 232 L328 175 L458 175 L508 232 Z" fill="url(#pvg)"/>
-          <g stroke="#5D7BA3" stroke-opacity=".55" stroke-width="1.2"><path d="M318 194H475M308 213H491M340 232L354 175M382 232L380 175M424 232L406 175M466 232L432 175"/></g>
-          <path class="pvglow" d="M298 232 L328 175 L458 175 L508 232 Z" fill="#FFCF6E"/>
-          <!-- windows -->
-          <rect x="232" y="270" width="62" height="52" fill="#0D1117"/><rect x="320" y="270" width="62" height="52" fill="#0D1117"/>
-          <rect class="t e" x="232" y="270" width="62" height="52" fill="#FFC872" opacity=".85"/><rect class="t e" x="320" y="270" width="62" height="52" fill="#FFC872" opacity=".85"/>
-          <rect class="t n" x="320" y="270" width="62" height="52" fill="#FFC872" opacity=".55"/>
-          <path d="M263 270v52M232 296h62M351 270v52M320 296h62" stroke="#151B24" stroke-width="3"/>
-          <rect x="420" y="300" width="44" height="80" fill="#0D1117"/><circle cx="456" cy="342" r="2" fill="#9AA3B0"/>
-          <!-- shower steam in morning -->
-          <g class="t m" stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none" stroke-linecap="round">
-            <path class="anim-rise" d="M250 266 q-5 -8 0 -16"/><path class="anim-rise" style="animation-delay:1.2s" d="M276 266 q-5 -8 0 -16"/>
-          </g>
-          <path class="t m anim-flow" d="M286 164 C 300 200, 270 230, 263 268" fill="none" stroke="#F2A33A" stroke-width="2"/>
-
-          <!-- carport + wallbox -->
-          <rect x="520" y="292" width="180" height="8" fill="#2A3340"/>
-          <rect x="528" y="300" width="5" height="80" fill="#2A3340"/><rect x="690" y="300" width="5" height="80" fill="#2A3340"/>
-          <rect x="537" y="316" width="16" height="26" rx="4" fill="#222A35" stroke="#3A4452"/>
-          <circle cx="545" cy="325" r="3" fill="#3A4452"/>
-          <circle class="t e n anim-pulse" cx="545" cy="325" r="3" fill="#2BD47A"/>
-          <g class="t m e n">
-            <path d="M560 372 L562 358 Q566 350 578 349 L598 346 Q612 334 632 334 L650 334 Q664 336 676 348 L684 351 Q690 355 690 365 L690 372 Z" fill="#2E3846"/>
-            <path d="M604 347 Q614 338 630 338 L648 338 Q658 340 666 348 Z" fill="#0D1117"/>
-            <circle cx="585" cy="373" r="8" fill="#0A0D12" stroke="#4A5566" stroke-width="2"/><circle cx="664" cy="373" r="8" fill="#0A0D12" stroke="#4A5566" stroke-width="2"/>
-          </g>
-          <path class="t e n" d="M545 342 Q 548 368 566 360" fill="none" stroke="#1E252F" stroke-width="5" stroke-linecap="round"/>
-          <path class="t e n anim-flow" d="M545 342 Q 548 368 566 360" fill="none" stroke="#2BD47A" stroke-width="1.6"/>
-        </svg>
-        <div class="clock" id="dayClock">06:30<small id="dayClockL">Manhã</small></div>
+    <div class="pl-card rv">
+      <div class="pl-img">
+        <img src="https://images.unsplash.com/photo-1630608354129-6a7704150401?auto=format&fit=crop&w=1400&q=75" alt="Casa com painéis solares" loading="lazy" data-p="0">
+        <img src="https://images.unsplash.com/photo-1780445392528-4895da4b2cb8?auto=format&fit=crop&w=1400&q=75" alt="Galpão comercial com painéis solares visto de cima" loading="lazy" data-p="1" style="opacity:0">
+        <img src="https://images.unsplash.com/photo-1761815139336-40b16b4cb8ee?auto=format&fit=crop&w=1400&q=75" alt="Propriedade rural com painéis solares no telhado" loading="lazy" data-p="2" style="opacity:0">
+        <span class="badge" id="plBadge">Telhado residencial</span>
       </div>
-
-      <div class="day-panel" id="dayPanel" aria-live="polite">
-        <p class="eyebrow" id="dayEyebrow">Aquecimento solar</p>
-        <h3 id="dayTitle">Banho quente antes do café.</h3>
-        <p id="dayText"></p>
-        <div class="day-k" id="dayK"></div>
-      </div>
-
-      <div class="day-tabs" role="tablist" aria-label="Momentos do dia">
-        <button class="day-tab on" data-s="m" role="tab"><b>06:30</b><span>Manhã</span><i></i></button>
-        <button class="day-tab" data-s="d" role="tab"><b>12:00</b><span>Meio-dia</span><i></i></button>
-        <button class="day-tab" data-s="e" role="tab"><b>18:30</b><span>Fim de tarde</span><i></i></button>
-        <button class="day-tab" data-s="n" role="tab"><b>23:00</b><span>Noite</span><i></i></button>
+      <div class="pl-txt" id="plTxt">
+        <p class="over">Seu lugar ao sol</p>
+        <h3 class="h3" id="plTitle">Seu telhado pode fazer mais.</h3>
+        <p id="plText">Telhado cerâmico, metálico ou laje: projetamos o sistema para o seu espaço, com estética discreta e o máximo de geração.</p>
+        <div class="check"><svg><use href="#i-check"/></svg><span id="plCheck">Para casas, sobrados e condomínios</span></div>
+        <div class="pl-act">
+          <a href="#projeto" class="btn btn-dark">Quero um projeto <svg><use href="#i-arrow"/></svg></a>
+          <a href="#projeto" class="help">Não tem certeza? A gente ajuda.</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SIMULATOR -->
-<section class="sim" id="simulador">
+<!-- INCLUDED -->
+<section class="sec inc" id="incluso">
   <div class="wrap">
-    <div class="sim-head">
-      <p class="eyebrow rv">Simulador de economia</p>
-      <h2 class="h-l rv d1" style="margin-top:1rem">Quanto o sol pode <em class="i gold">devolver para você?</em></h2>
-      <p class="lead rv d2">Arraste para o valor médio da sua conta de luz e veja a estimativa na hora.</p>
+    <div class="sec-head">
+      <h2 class="h2 rv">Tudo incluso.<br>Até o último detalhe.</h2>
+      <p class="rv d1">Um bom sistema é mais do que a soma das partes. Veja tudo o que entregamos, sem custo escondido e sem você precisar correr atrás de nada.</p>
     </div>
+    <div class="inc-card rv">
+      <div class="inc-vis" id="incVis">
+        <svg class="art" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="pv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1C2530"/><stop offset="1" stop-color="#0A0F14"/></linearGradient>
+            <linearGradient id="pvShine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+            <linearGradient id="inv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCD9D0"/></linearGradient>
+            <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0A3D2B" flood-opacity=".22"/></filter>
+          </defs>
+          <ellipse cx="300" cy="430" rx="250" ry="18" fill="#0A3D2B" opacity=".08"/>
+          <!-- panel 2 (back) -->
+          <g filter="url(#sh)" transform="translate(150 50)">
+            <rect width="190" height="330" rx="6" fill="url(#pv)"/>
+            <g stroke="#2E3A47" stroke-width="1.2"><path d="M0 41h190M0 82h190M0 124h190M0 165h190M0 206h190M0 248h190M0 289h190M32 0v330M63 0v330M95 0v330M127 0v330M158 0v330"/></g>
+            <rect width="190" height="330" rx="6" fill="url(#pvShine)"/>
+          </g>
+          <!-- panel 1 (front) -->
+          <g filter="url(#sh)" transform="translate(70 90)">
+            <rect width="190" height="330" rx="6" fill="url(#pv)"/>
+            <g stroke="#2E3A47" stroke-width="1.2"><path d="M0 41h190M0 82h190M0 124h190M0 165h190M0 206h190M0 248h190M0 289h190M32 0v330M63 0v330M95 0v330M127 0v330M158 0v330"/></g>
+            <rect width="190" height="330" rx="6" fill="url(#pvShine)"/>
+          </g>
+          <!-- inverter -->
+          <g filter="url(#sh)" transform="translate(330 210)">
+            <rect width="130" height="170" rx="14" fill="url(#inv)"/>
+            <rect x="14" y="14" width="102" height="44" rx="8" fill="#0A3D2B"/>
+            <rect x="24" y="26" width="40" height="5" rx="2.5" fill="#F2A72E"/><rect x="24" y="37" width="62" height="5" rx="2.5" fill="#fff" opacity=".35"/>
+            <circle cx="102" cy="34" r="5" fill="#4ADE80"/>
+            <g stroke="#CFCBC0" stroke-width="2"><path d="M20 92h90M20 102h90M20 112h90M20 122h90"/></g>
+          </g>
+          <!-- phone -->
+          <g filter="url(#sh)" transform="translate(455 150) rotate(6)">
+            <rect width="100" height="196" rx="18" fill="#0E1A14"/>
+            <rect x="6" y="6" width="88" height="184" rx="13" fill="#FAF9F5"/>
+            <rect x="16" y="22" width="40" height="5" rx="2.5" fill="#0A3D2B" opacity=".5"/>
+            <text x="16" y="52" font-family="Manrope, sans-serif" font-size="17" font-weight="700" fill="#0A3D2B">38,4</text>
+            <text x="16" y="64" font-family="DM Sans, sans-serif" font-size="7" fill="#4C6158">kWh hoje</text>
+            <g fill="#F2A72E"><rect x="16" y="120" width="8" height="30" rx="2"/><rect x="28" y="104" width="8" height="46" rx="2"/><rect x="40" y="92" width="8" height="58" rx="2"/><rect x="52" y="86" width="8" height="64" rx="2"/><rect x="64" y="98" width="8" height="52" rx="2"/><rect x="76" y="116" width="8" height="34" rx="2"/></g>
+            <rect x="16" y="160" width="68" height="18" rx="6" fill="#0A3D2B"/>
+            <text x="50" y="172" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" fill="#fff">− R$ 612 / mês</text>
+          </g>
+          <!-- document -->
+          <g filter="url(#sh)" transform="translate(372 64) rotate(-5)">
+            <rect width="104" height="128" rx="8" fill="#fff"/>
+            <rect x="14" y="16" width="52" height="6" rx="3" fill="#0A3D2B"/>
+            <g fill="#CFCBC0"><rect x="14" y="34" width="76" height="4" rx="2"/><rect x="14" y="44" width="66" height="4" rx="2"/><rect x="14" y="54" width="72" height="4" rx="2"/><rect x="14" y="64" width="50" height="4" rx="2"/></g>
+            <circle cx="74" cy="100" r="14" fill="none" stroke="#F2A72E" stroke-width="3"/><path d="M67 100l5 5 9-10" fill="none" stroke="#F2A72E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+        <button class="hot on" data-i="0" style="left:27%;top:48%" aria-label="Painéis solares">1</button>
+        <button class="hot" data-i="1" style="left:65%;top:62%" aria-label="Inversor">2</button>
+        <button class="hot" data-i="2" style="left:86%;top:46%" aria-label="Monitoramento">3</button>
+        <button class="hot" data-i="3" style="left:70%;top:24%" aria-label="Projeto e homologação">4</button>
+      </div>
+      <div class="inc-txt">
+        <div class="inc-chips" role="tablist">
+          <button class="inc-chip on" data-i="0">1 · Painéis</button>
+          <button class="inc-chip" data-i="1">2 · Inversor</button>
+          <button class="inc-chip" data-i="2">3 · Monitoramento</button>
+          <button class="inc-chip" data-i="3">4 · Projeto e homologação</button>
+        </div>
+        <div class="inc-body" id="incBody">
+          <h3 class="h3" id="incTitle">Capturam o sol.</h3>
+          <p id="incText">Módulos de alta eficiência, totalmente pretos, com garantia de performance de 25 anos. Discretos no telhado, potentes na geração.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="sim-card rv">
-      <div class="sim-in">
+<!-- LIFESTYLE -->
+<section class="life" aria-label="Mais economia hoje">
+  <img id="lifeImg" src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=2000&q=70" alt="Casa moderna com piscina ao pôr do sol" loading="lazy">
+  <div class="life-in">
+    <h2 class="h2 rv">Mais economia hoje.<br>Mais tranquilidade amanhã.</h2>
+    <p class="rv d1">Sua casa continua sendo a sua casa. Ela só passa a trabalhar um pouco mais por você.</p>
+  </div>
+</section>
+
+<!-- SAVINGS -->
+<section class="sec" id="economia">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 rv">Quanto você<br>deixa de pagar?</h2>
+      <p class="muted rv d1">Arraste até o valor da sua conta de luz e compare, lado a lado, quem tem e quem não tem as soluções da Solução Solar.</p>
+    </div>
+    <div class="sav-card rv">
+      <div class="sav-l">
         <label for="billRange">Sua conta de luz média por mês</label>
         <div class="bill"><small>R$</small><span id="billVal">600</span></div>
         <input type="range" id="billRange" min="150" max="5000" step="50" value="600" aria-label="Valor da conta de luz">
         <div class="range-l"><span>R$ 150</span><span>R$ 5.000+</span></div>
-
-        <label style="margin-top:2rem">Tipo de imóvel</label>
-        <div class="seg" id="seg" style="margin-top:0">
-          <button class="on" data-f="1">Residência</button>
-          <button data-f="1.02">Comércio</button>
-          <button data-f="1.05">Indústria / Rural</button>
+        <div class="sav-res">
+          <small>Economia estimada em 25 anos</small>
+          <b id="save25">R$ 0</b>
+          <small>cerca de <strong id="saveMonth" style="color:#fff">R$ 0</strong> por mês já no primeiro ano</small>
+          <div class="kp">
+            <div><b id="kwp">0 kWp</b><span>sistema</span></div>
+            <div><b id="panels">0</b><span>painéis</span></div>
+            <div><b id="payback">0 anos</b><span>retorno</span></div>
+          </div>
         </div>
-        <p class="sim-note">Estimativa com base em tarifa média de R$ 0,95/kWh, irradiação média brasileira e reajuste anual de 6% na tarifa. Os valores reais dependem da sua região, telhado e distribuidora — confirmamos tudo na visita técnica gratuita.</p>
       </div>
-      <div class="sim-out">
-        <div class="big-save">Economia estimada em 25 anos
-          <b class="gold" id="save25">R$ 0</b>
-          o equivalente a <strong id="saveMonth" style="color:#fff">R$ 0</strong> por mês no primeiro ano
+      <div class="sav-r">
+        <div class="cmp-h"><b>Custo por ano</b><div class="legend"><span><i style="background:#A7AEA9"></i>Sem</span><span><i style="background:var(--sun)"></i>Com Solução Solar</span></div></div>
+        <div class="cmp">
+          <div class="cmp-t"><span>Conta de luz</span><em id="cLuz">− R$ 0/ano</em></div>
+          <div class="bars">
+            <div class="bar no"><div class="tr"><i id="bLuzNo"></i></div><span id="vLuzNo">R$ 0</span></div>
+            <div class="bar yes"><div class="tr"><i id="bLuzYes"></i></div><span id="vLuzYes">R$ 0</span></div>
+          </div>
         </div>
-        <div class="bars">
-          <div class="bar-row"><span>Hoje</span><div class="track"><div class="fill before" style="width:100%"></div></div><b id="barBefore">R$ 600</b></div>
-          <div class="bar-row"><span>Com solar</span><div class="track"><div class="fill after" id="barAfterFill" style="width:10%"></div></div><b id="barAfter">R$ 60</b></div>
+        <div class="cmp">
+          <div class="cmp-t"><span>Piscina aquecida <small class="muted" style="font-weight:400;font-family:var(--body)">· 40 m³, gás</small></span><em>− R$ 9.300/ano</em></div>
+          <div class="bars">
+            <div class="bar no"><div class="tr"><i data-w="100"></i></div><span>R$ 9.600</span></div>
+            <div class="bar yes"><div class="tr"><i data-w="3"></i></div><span>R$ 300</span></div>
+          </div>
         </div>
-        <div class="kpis">
-          <div><b id="kwp">0 kWp</b><span>potência do sistema</span></div>
-          <div><b id="panels">0</b><span>painéis aproximadamente</span></div>
-          <div><b id="payback">0 anos</b><span>retorno do investimento</span></div>
-          <div><b id="co2">0 t</b><span>de CO₂ evitados em 25 anos</span></div>
+        <div class="cmp">
+          <div class="cmp-t"><span>Banho quente <small class="muted" style="font-weight:400;font-family:var(--body)">· família de 4</small></span><em>− R$ 2.320/ano</em></div>
+          <div class="bars">
+            <div class="bar no"><div class="tr"><i data-w="30"></i></div><span>R$ 2.900</span></div>
+            <div class="bar yes"><div class="tr"><i data-w="6"></i></div><span>R$ 580</span></div>
+          </div>
         </div>
-        <a href="#contato" class="btn btn-sun" style="margin-top:2rem;width:100%;justify-content:center" id="simCta">Receber projeto com esses números</a>
+        <div class="cmp">
+          <div class="cmp-t"><span>Carro <small class="muted" style="font-weight:400;font-family:var(--body)">· 15.000 km, gasolina</small></span><em>− R$ 7.450/ano</em></div>
+          <div class="bars">
+            <div class="bar no"><div class="tr"><i data-w="81"></i></div><span>R$ 7.750</span></div>
+            <div class="bar yes"><div class="tr"><i data-w="3"></i></div><span>R$ 300</span></div>
+          </div>
+        </div>
+        <p class="fine" style="margin-top:.6rem">Estimativas com tarifa de R$ 0,95/kWh, reajuste de 6% ao ano, gasolina a R$ 6,20/L (12 km/L) e GLP a preço médio de mercado. Cada projeto recebe um cálculo personalizado.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARE -->
-<section class="compare" id="comparativo">
+<!-- STEPS -->
+<section class="sec" id="como-funciona" style="padding-top:0">
   <div class="wrap">
-    <div class="compare-head">
+    <div class="sec-head">
       <div>
-        <p class="eyebrow rv" style="color:var(--green)">Comparativo</p>
-        <h2 class="h-l rv d1" style="margin-top:1rem">Quem tem, <span class="mark">economiza.</span> <br><em class="i">Quem não tem, paga.</em></h2>
+        <p class="over rv" style="color:var(--green);margin-bottom:1rem">De ponta a ponta. Do seu lado.</p>
+        <h2 class="h2 rv d1">Do “seria bom”<br>ao “já está funcionando”.</h2>
       </div>
-      <p class="lead rv d2">Veja, lado a lado, quanto custa por ano manter uma casa típica com e sem as soluções da Solução Solar.</p>
-    </div>
-
-    <div class="cmp-grid">
-      <div class="cmp rv">
-        <div class="cmp-top"><h3>Conta de luz</h3><span class="cmp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCF6E" stroke-width="1.8"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M9 5v12M15 5v12M3 11h18M12 17v3M8 21h8"/></svg></span></div>
-        <div class="cmp-rows">
-          <div class="cmp-row no"><div class="lbl">Sem energia solar <b>R$ 7.200/ano</b></div><div class="tr"><i data-w="100"></i></div></div>
-          <div class="cmp-row yes"><div class="lbl">Com energia solar <b>R$ 720/ano</b></div><div class="tr"><i data-w="10"></i></div></div>
-        </div>
-        <div class="cmp-foot"><span>Conta de R$ 600/mês</span><b>−R$ 6.480/ano</b></div>
-      </div>
-
-      <div class="cmp rv d1">
-        <div class="cmp-top"><h3>Aquecimento de piscina</h3><span class="cmp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FE3F0" stroke-width="1.8"><path d="M2 16c2 0 2-1.5 4-1.5S8 16 10 16s2-1.5 4-1.5S16 16 18 16s2-1.5 4-1.5M2 20c2 0 2-1.5 4-1.5S8 20 10 20s2-1.5 4-1.5S16 20 18 20s2-1.5 4-1.5M8 12V5a2 2 0 0 1 4 0M14 12V5a2 2 0 0 1 4 0"/></svg></span></div>
-        <div class="cmp-rows">
-          <div class="cmp-row no"><div class="lbl">Aquecedor a gás <b>R$ 9.600/ano</b></div><div class="tr"><i data-w="100"></i></div></div>
-          <div class="cmp-row no"><div class="lbl">Bomba de calor elétrica <b>R$ 4.800/ano</b></div><div class="tr"><i data-w="50"></i></div></div>
-          <div class="cmp-row yes"><div class="lbl">Aquecimento solar <b>≈ R$ 300/ano</b></div><div class="tr"><i data-w="4"></i></div></div>
-        </div>
-        <div class="cmp-foot"><span>Piscina de 40 m³, uso o ano todo</span><b>−R$ 9.300/ano</b></div>
-      </div>
-
-      <div class="cmp rv">
-        <div class="cmp-top"><h3>Banho quente</h3><span class="cmp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCF6E" stroke-width="1.8"><path d="M4 21V8a5 5 0 0 1 10 0M10 8h8l-1 3h-6zM12 14v1M15 14v2M18 14v1M13 18v1M16 18v1"/></svg></span></div>
-        <div class="cmp-rows">
-          <div class="cmp-row no"><div class="lbl">Chuveiro elétrico <b>R$ 2.900/ano</b></div><div class="tr"><i data-w="100"></i></div></div>
-          <div class="cmp-row yes"><div class="lbl">Aquecimento solar <b>R$ 580/ano</b></div><div class="tr"><i data-w="20"></i></div></div>
-        </div>
-        <div class="cmp-foot"><span>Família de 4 pessoas</span><b>−R$ 2.320/ano</b></div>
-      </div>
-
-      <div class="cmp rv d1">
-        <div class="cmp-top"><h3>Abastecer o carro</h3><span class="cmp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2BD47A" stroke-width="1.8"><path d="M5 17h14M4 17l1.5-6A2 2 0 0 1 7.4 9.5h9.2a2 2 0 0 1 1.9 1.5L20 17v2H4zM7 17v2M17 17v2M12 4l-2 3h3l-2 3"/></svg></span></div>
-        <div class="cmp-rows">
-          <div class="cmp-row no"><div class="lbl">Carro a gasolina <b>R$ 7.750/ano</b></div><div class="tr"><i data-w="100"></i></div></div>
-          <div class="cmp-row no"><div class="lbl">Elétrico na rede <b>R$ 2.130/ano</b></div><div class="tr"><i data-w="27"></i></div></div>
-          <div class="cmp-row yes"><div class="lbl">Elétrico + Wallbox + solar <b>≈ R$ 300/ano</b></div><div class="tr"><i data-w="4"></i></div></div>
-        </div>
-        <div class="cmp-foot"><span>15.000 km rodados por ano</span><b>−R$ 7.450/ano</b></div>
-      </div>
-    </div>
-
-    <div class="table-wrap rv">
-      <table>
-        <thead><tr><th>Na prática</th><th>Sem Solução Solar</th><th>Com Solução Solar</th></tr></thead>
-        <tbody>
-          <tr><td>Reajuste da tarifa de energia</td><td class="n">Você sente todo ano</td><td class="y">Praticamente imune</td></tr>
-          <tr><td>Bandeira vermelha</td><td class="n">Conta mais cara</td><td class="y">Impacto mínimo</td></tr>
-          <tr><td>Piscina no inverno</td><td class="n">Fechada ou cara para aquecer</td><td class="y">Em uso por mais meses</td></tr>
-          <tr><td>Banho quente</td><td class="n">Chuveiro pesando na conta</td><td class="y">Água quente pelo sol</td></tr>
-          <tr><td>Carro elétrico</td><td class="n">Recarga lenta na tomada</td><td class="y">Recarga rápida e quase grátis</td></tr>
-          <tr><td>Valor do imóvel</td><td class="n">Sem diferencial</td><td class="y">Imóvel valorizado</td></tr>
-          <tr><td>Suporte depois da compra</td><td class="n">Você se vira sozinho</td><td class="y">Equipe dedicada no pós-venda</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="foot-note">*Valores estimados para fins comparativos, considerando tarifa de R$ 0,95/kWh, gasolina a R$ 6,20/L (12 km/L), GLP a preço médio de mercado e consumo de 15 kWh/100 km para veículos elétricos. Cada projeto recebe um cálculo personalizado.</p>
-  </div>
-</section>
-
-<!-- JOURNEY -->
-<section class="journey" id="jornada">
-  <div class="wrap">
-    <div class="journey-head">
-      <p class="eyebrow rv">Acompanhamento de ponta a ponta</p>
-      <h2 class="h-l rv d1" style="margin-top:1rem">Você decide. <em class="i">Nós cuidamos de todo o resto.</em></h2>
-      <p class="lead rv d2">Uma única empresa responsável por cada etapa: do primeiro contato ao suporte anos depois da instalação. Sem terceirizar o problema para você.</p>
+      <a href="#projeto" class="btn btn-dark rv d2">Planejar meu projeto <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="steps">
-      <div class="step rv"><span class="n">01</span><h3>Diagnóstico gratuito</h3><p>Analisamos suas contas, seus hábitos e o seu imóvel para entender onde está o desperdício.</p></div>
-      <div class="step rv d1"><span class="n">02</span><h3>Projeto sob medida</h3><p>Engenharia própria dimensiona o sistema ideal, com estimativa clara de economia e retorno.</p></div>
-      <div class="step rv d2"><span class="n">03</span><h3>Financiamento facilitado</h3><p>Ajudamos a encontrar a melhor condição. Em muitos casos, a parcela fica menor que a economia.</p></div>
-      <div class="step rv"><span class="n">04</span><h3>Homologação e licenças</h3><p>Cuidamos de toda a papelada com a distribuidora, ART e documentação técnica.</p></div>
-      <div class="step rv d1"><span class="n">05</span><h3>Instalação limpa</h3><p>Equipe própria e treinada, com segurança, pontualidade e obra entregue organizada.</p></div>
-      <div class="step rv d2"><span class="n">06</span><h3>Pós-venda de verdade</h3><p>Monitoramento, manutenção preventiva e suporte rápido sempre que você precisar.</p></div>
+      <div class="step rv"><div class="step-t"><small>01</small><span><svg><use href="#i-search"/></svg></span></div><h3>Diagnóstico gratuito.</h3><p>Analisamos suas contas, seus hábitos e o seu imóvel para entender onde está o desperdício.</p></div>
+      <div class="step rv d1"><div class="step-t"><small>02</small><span><svg><use href="#i-pen"/></svg></span></div><h3>Projeto sob medida.</h3><p>Engenharia própria dimensiona o sistema ideal, com economia e retorno explicados com clareza.</p></div>
+      <div class="step rv d2"><div class="step-t"><small>03</small><span><svg><use href="#i-card"/></svg></span></div><h3>Financiamento facilitado.</h3><p>Buscamos a melhor condição para você. Em muitos casos, a parcela fica menor que a economia.</p></div>
+      <div class="step rv"><div class="step-t"><small>04</small><span><svg><use href="#i-doc"/></svg></span></div><h3>Homologação e licenças.</h3><p>Cuidamos de toda a papelada com a distribuidora, ART e documentação técnica.</p></div>
+      <div class="step rv d1"><div class="step-t"><small>05</small><span><svg><use href="#i-tool"/></svg></span></div><h3>Instalação limpa.</h3><p>Equipe própria e treinada, com segurança, pontualidade e obra entregue organizada.</p></div>
+      <div class="step rv d2"><div class="step-t"><small>06</small><span><svg><use href="#i-shield"/></svg></span></div><h3>Pós-venda de verdade.</h3><p>Monitoramento, manutenção preventiva e suporte rápido sempre que você precisar.</p></div>
     </div>
-    <div class="journey-band rv">
+    <div class="promise rv">
+      <img src="assets/favicon.png" alt="" width="44" height="44">
       <p>Depois da instalação, a gente não some. É aí que o nosso compromisso começa.</p>
-      <a href="#contato" class="btn btn-sun">Falar com um especialista</a>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-  <div class="wrap">
-    <p class="eyebrow rv">Por que a Solução Solar</p>
-    <h2 class="h-l rv d1" style="margin-top:1rem;max-width:18ch">Tecnologia de ponta. <em class="i gold">Gente que responde.</em></h2>
-    <div class="trust-grid">
-      <div class="t-card rv"><b>25 anos</b><p>de garantia de performance nos painéis fotovoltaicos, direto do fabricante.</p></div>
-      <div class="t-card rv d1"><b>Tier 1</b><p>Equipamentos de marcas líderes mundiais, certificados pelo Inmetro.</p></div>
-      <div class="t-card rv d2"><b>Equipe própria</b><p>Engenheiros e instaladores treinados. Quem projeta é quem acompanha.</p></div>
-      <div class="t-card rv d3"><b>Monitoramento</b><p>Acompanhamos a geração do seu sistema e avisamos se algo sair do esperado.</p></div>
-    </div>
-    <div class="quotes">
-      <div class="quote rv"><span class="stars">★★★★★</span><p>“Minha conta caiu de R$ 890 para R$ 74. O que mais me surpreendeu foi o atendimento depois da instalação.”</p><div class="who"><i>R</i><div><b>Ricardo M.</b>Residência · Fotovoltaica</div></div></div>
-      <div class="quote rv d1"><span class="stars">★★★★★</span><p>“A piscina passou a ser usada em julho. E sem aquele susto na conta de gás que tínhamos antes.”</p><div class="who"><i>A</i><div><b>Ana Paula S.</b>Residência · Piscina</div></div></div>
-      <div class="quote rv d2"><span class="stars">★★★★★</span><p>“Instalaram o Wallbox e o solar juntos. Hoje rodo com o carro praticamente sem custo.”</p><div class="who"><i>F</i><div><b>Fernando L.</b>Residência · Wallbox + Solar</div></div></div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq" id="faq">
+<section class="sec" id="duvidas" style="padding-top:0">
   <div class="wrap faq-grid">
     <div>
-      <p class="eyebrow rv">Dúvidas frequentes</p>
-      <h2 class="h-l rv d1" style="margin-top:1rem">Tudo claro, <em class="i">antes de decidir.</em></h2>
-      <p class="lead rv d2" style="margin-top:1.2rem">Não encontrou sua pergunta? Nossa equipe responde no WhatsApp.</p>
+      <h2 class="h2 rv">Boas perguntas.<br>Respostas claras.</h2>
+      <p class="muted rv d1">Ainda com dúvidas? A gente ajuda você a decidir com calma.</p>
+      <a href="#projeto" class="text-link rv d2">Pergunte para a gente <span class="circle-arrow"><svg><use href="#i-right"/></svg></span></a>
     </div>
     <div class="rv d1">
-      <details open><summary>A conta de luz zera com energia solar?</summary><p>A conta cai drasticamente, mas não zera: continua existindo a taxa mínima de disponibilidade e encargos da distribuidora. Na prática, a economia costuma chegar a até 95%, dependendo do perfil de consumo.</p></details>
-      <details><summary>E nos dias nublados ou à noite?</summary><p>O sistema fotovoltaico fica conectado à rede. Durante o dia, o excedente gera créditos que você usa à noite e em dias nublados. Ninguém fica sem energia.</p></details>
-      <details><summary>Quanto tempo leva do contrato à instalação?</summary><p>A instalação em si leva de 1 a 3 dias para residências. O prazo total, incluindo projeto e homologação com a distribuidora, costuma ficar entre 30 e 60 dias.</p></details>
-      <details><summary>Dá para financiar?</summary><p>Sim. Trabalhamos com linhas de crédito específicas para energia solar, e em muitos casos a parcela fica menor do que a economia mensal. Você troca a conta de luz por um investimento.</p></details>
-      <details><summary>O sistema precisa de manutenção?</summary><p>Muito pouca: limpeza periódica dos painéis e uma revisão preventiva. Nosso pós-venda orienta e agenda tudo, e o monitoramento avisa se algo sair do esperado.</p></details>
-      <details><summary>Posso instalar Wallbox sem energia solar?</summary><p>Pode. Fazemos a vistoria elétrica e instalamos o carregador com circuito dedicado. Mas com energia solar a recarga fica praticamente gratuita, por isso recomendamos avaliar os dois juntos.</p></details>
+      <details open><summary>A conta de luz zera com energia solar?<svg><use href="#i-chev"/></svg></summary><p>Ela cai muito, mas não zera: continuam existindo a taxa mínima de disponibilidade e alguns encargos da distribuidora. Na prática, a economia costuma chegar a até 95%, dependendo do seu perfil de consumo.</p></details>
+      <details><summary>E nos dias nublados ou à noite?<svg><use href="#i-chev"/></svg></summary><p>O sistema fica conectado à rede. Durante o dia, o excedente vira crédito, que você usa à noite e em dias nublados. Ninguém fica sem energia.</p></details>
+      <details><summary>Quanto tempo leva até a instalação?<svg><use href="#i-chev"/></svg></summary><p>A instalação em residências leva de 1 a 3 dias. Somando projeto e homologação com a distribuidora, o prazo total costuma ficar entre 30 e 60 dias.</p></details>
+      <details><summary>Dá para financiar?<svg><use href="#i-chev"/></svg></summary><p>Sim. Trabalhamos com linhas de crédito específicas para energia solar, e em muitos casos a parcela fica menor que a economia mensal. Você troca a conta de luz por um investimento.</p></details>
+      <details><summary>O sistema precisa de manutenção?<svg><use href="#i-chev"/></svg></summary><p>Muito pouca: limpeza periódica dos painéis e uma revisão preventiva. O nosso pós-venda orienta e agenda tudo, e o monitoramento avisa se algo sair do esperado.</p></details>
+      <details><summary>Posso instalar o Wallbox sem energia solar?<svg><use href="#i-chev"/></svg></summary><p>Pode. Fazemos a vistoria elétrica e instalamos o carregador com circuito dedicado. Mas com energia solar a recarga fica praticamente gratuita, por isso vale avaliar os dois juntos.</p></details>
     </div>
   </div>
 </section>
 
-<!-- CTA / CONTACT -->
-<section class="cta" id="contato">
-  <div class="wrap cta-grid">
+<!-- CTA -->
+<section class="cta">
+  <img class="cta-sun" src="assets/favicon.png" alt="" aria-hidden="true">
+  <h2 class="h2 rv">Olá, sol.<br>Olá, <b>economia.</b></h2>
+  <div class="cta-r rv d1">
+    <p class="big-p">O primeiro passo é uma conversa. O resto, a gente resolve junto.</p>
+    <a href="#projeto" class="btn btn-dark">Vamos começar <svg><use href="#i-arrow"/></svg></a>
+    <small>Sem compromisso. Com clareza. Do seu lado.</small>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="sec" id="projeto">
+  <div class="wrap form-grid">
     <div>
-      <p class="eyebrow rv">Orçamento gratuito e sem compromisso</p>
-      <h2 class="h-xl rv d1" style="font-size:clamp(2.4rem,5.6vw,5rem);margin-top:1rem">Cada mês sem solar <em class="i gold">é dinheiro no telhado.</em></h2>
-      <p class="lead rv d2">Receba um projeto personalizado com economia, retorno e condições de pagamento. Um especialista entra em contato em até 1 dia útil.</p>
-      <ul class="cta-list rv d3">
-        <li>Visita técnica gratuita</li>
-        <li>Projeto e homologação inclusos</li>
-        <li>Suporte completo no pós-venda</li>
-      </ul>
+      <h2 class="h2 rv">Seu imóvel.<br>Seu projeto.</h2>
+      <p class="muted rv d1" style="margin-top:1.2rem;max-width:40ch">Algumas perguntas transformam uma ideia em um bom começo. Leva cerca de 2 minutos.</p>
+      <ol class="f-steps rv d2" id="fSteps">
+        <li class="on"><span>01</span>Seu imóvel</li>
+        <li><span>02</span>Seu consumo</li>
+        <li><span>03</span>Seus interesses</li>
+        <li><span>04</span>Contato</li>
+      </ol>
+      <p class="fine rv d2" style="margin:0">Não sabe alguma resposta? “Não sei ainda” também é uma ótima resposta.</p>
+      <div class="direct rv d3">
+        <b>Prefere falar direto?</b>
+        <p>Tiramos qualquer dúvida sobre o seu projeto.</p>
+        <a href="#" class="wa-link"><svg><use href="#i-phone"/></svg>(00) 00000-0000</a>
+        <a href="mailto:contato@solucaosolar.com.br"><svg><use href="#i-mail"/></svg>contato@solucaosolar.com.br</a>
+        <span><svg><use href="#i-clock"/></svg>Seg a sex, 8h às 18h</span>
+      </div>
     </div>
-    <form class="lead-form rv d1" id="leadForm" novalidate>
-      <h3>Solicite seu projeto</h3>
-      <div class="field"><label for="fNome">Nome</label><input id="fNome" name="nome" required autocomplete="name" placeholder="Seu nome"></div>
-      <div class="row2">
-        <div class="field"><label for="fTel">WhatsApp</label><input id="fTel" name="tel" required type="tel" autocomplete="tel" placeholder="(00) 00000-0000"></div>
-        <div class="field"><label for="fCidade">Cidade</label><input id="fCidade" name="cidade" autocomplete="address-level2" placeholder="Sua cidade"></div>
-      </div>
-      <div class="row2">
-        <div class="field"><label for="fInteresse">Interesse</label>
-          <select id="fInteresse" name="interesse">
-            <option>Energia solar fotovoltaica</option>
-            <option>Aquecimento de piscina</option>
-            <option>Aquecimento solar de água</option>
-            <option>Instalação de Wallbox</option>
-            <option>Quero uma solução completa</option>
-          </select>
+
+    <form class="f-card rv d1" id="fForm" novalidate>
+      <div class="f-head"><b>Seu projeto solar</b><span id="fCount">1 / 4</span></div>
+
+      <div class="f-pane on" data-step="0">
+        <h3>Onde vamos instalar?</h3>
+        <p>Casa, empresa ou propriedade rural.</p>
+        <div class="opts" data-name="imovel" data-single>
+          <button type="button" class="opt" data-v="Casa"><div class="oi"><img src="https://images.unsplash.com/photo-1630608354129-6a7704150401?auto=format&fit=crop&w=500&q=70" alt="" loading="lazy"></div><div class="ot"><b>Casa</b><span>Residência ou condomínio</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+          <button type="button" class="opt" data-v="Empresa"><div class="oi"><img src="https://images.unsplash.com/photo-1780445392528-4895da4b2cb8?auto=format&fit=crop&w=500&q=70" alt="" loading="lazy"></div><div class="ot"><b>Empresa</b><span>Comércio ou indústria</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+          <button type="button" class="opt" data-v="Propriedade rural"><div class="oi"><img src="https://images.unsplash.com/photo-1761815139336-40b16b4cb8ee?auto=format&fit=crop&w=500&q=70" alt="" loading="lazy"></div><div class="ot"><b>Rural</b><span>Sítio ou fazenda</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+          <button type="button" class="opt" data-v="Não sei ainda"><div class="oi q">?</div><div class="ot"><b>Não sei ainda</b><span>Vamos descobrir juntos</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
         </div>
-        <div class="field"><label for="fConta">Conta de luz média</label><input id="fConta" name="conta" inputmode="numeric" placeholder="R$ 600"></div>
       </div>
-      <button class="btn btn-sun" type="submit">Quero meu orçamento grátis →</button>
-      <p class="form-note">Ao enviar, você será direcionado ao nosso WhatsApp. Seus dados não são compartilhados.</p>
+
+      <div class="f-pane" data-step="1">
+        <h3>Quanto você paga de luz?</h3>
+        <p>Uma média dos últimos meses já ajuda.</p>
+        <div class="bill-pick">
+          <div class="v">R$ <span id="fBillVal">600</span></div>
+          <input type="range" id="fBill" min="100" max="5000" step="50" value="600" aria-label="Conta de luz média">
+          <div class="range-l"><span>R$ 100</span><span>R$ 5.000+</span></div>
+          <div class="presets"><button type="button" data-b="300">R$ 300</button><button type="button" data-b="600">R$ 600</button><button type="button" data-b="1200">R$ 1.200</button><button type="button" data-b="3000">R$ 3.000</button><button type="button" data-b="0">Não sei</button></div>
+        </div>
+      </div>
+
+      <div class="f-pane" data-step="2">
+        <h3>O que você quer resolver?</h3>
+        <p>Pode escolher mais de uma opção.</p>
+        <div class="opts" data-name="interesse">
+          <button type="button" class="opt opt-ico" data-v="Energia solar" data-k="luz"><span class="ic"><svg><use href="#i-bolt"/></svg></span><div><b style="font-family:var(--head)">Conta de luz</b><br><span style="font-size:.78rem;color:var(--ink-soft)">Energia solar</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+          <button type="button" class="opt opt-ico" data-v="Aquecimento de piscina" data-k="piscina"><span class="ic"><svg><use href="#i-wave"/></svg></span><div><b style="font-family:var(--head)">Aquecer a piscina</b><br><span style="font-size:.78rem;color:var(--ink-soft)">Sem gás</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+          <button type="button" class="opt opt-ico" data-v="Aquecimento solar" data-k="banho"><span class="ic"><svg><use href="#i-drop"/></svg></span><div><b style="font-family:var(--head)">Banho quente</b><br><span style="font-size:.78rem;color:var(--ink-soft)">Aquecimento solar</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+          <button type="button" class="opt opt-ico" data-v="Wallbox" data-k="carro"><span class="ic"><svg><use href="#i-car"/></svg></span><div><b style="font-family:var(--head)">Carro elétrico</b><br><span style="font-size:.78rem;color:var(--ink-soft)">Wallbox</span></div><span class="tick"><svg><use href="#i-tick"/></svg></span></button>
+        </div>
+      </div>
+
+      <div class="f-pane" data-step="3">
+        <h3>Como falamos com você?</h3>
+        <p>Um especialista responde em até 1 dia útil.</p>
+        <div class="fields">
+          <div class="fld"><label for="fNome">Nome</label><input id="fNome" autocomplete="name" placeholder="Seu nome"></div>
+          <div class="fld"><label for="fTel">WhatsApp</label><input id="fTel" type="tel" autocomplete="tel" placeholder="(00) 00000-0000"></div>
+          <div class="fld"><label for="fCidade">Cidade</label><input id="fCidade" autocomplete="address-level2" placeholder="Sua cidade"></div>
+        </div>
+      </div>
+
+      <div class="f-pane" data-step="4">
+        <div class="f-done">
+          <div class="ok"><svg width="28" height="28"><use href="#i-tick"/></svg></div>
+          <h3>Tudo pronto!</h3>
+          <p style="color:var(--ink-soft);margin-top:.5rem">Abrimos o WhatsApp com o seu pedido. É só enviar a mensagem.</p>
+        </div>
+      </div>
+
+      <div class="f-foot" id="fFoot">
+        <button type="button" class="back" id="fBack" hidden>← Voltar</button>
+        <small>Cerca de 2 minutos</small>
+        <button type="button" class="btn btn-dark btn-sm" id="fNext">Próximo <svg><use href="#i-right"/></svg></button>
+      </div>
+      <p class="f-note">Suas respostas são enviadas junto com o seu contato e usadas apenas para responder ao seu pedido.</p>
     </form>
   </div>
 </section>
@@ -1097,24 +911,21 @@ footer{background:var(--ink);color:var(--muted-d);border-top:1px solid var(--lin
 
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="ft">
       <div>
-        <a href="#top" class="logo" style="color:#fff;margin-bottom:1rem">
-          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="7" fill="url(#lg)"/><g stroke="url(#lg)" stroke-width="1.8" stroke-linecap="round"><path d="M16 2.5v3.5M16 26v3.5M2.5 16H6M26 16h3.5M6.4 6.4l2.5 2.5M23.1 23.1l2.5 2.5M6.4 25.6l2.5-2.5M23.1 8.9l2.5-2.5"/></g></svg>
-          <span><b>Solução</b> Solar</span>
-        </a>
-        <p style="max-width:34ch">Energia solar, aquecimento e mobilidade elétrica com acompanhamento de ponta a ponta.</p>
+        <img src="assets/logo.png" alt="Solução Solar" width="1000" height="305">
+        <p class="tag">Energia do sol. Do projeto ao pós-venda.</p>
       </div>
-      <div><h4>Soluções</h4><ul><li><a href="#fotovoltaica">Fotovoltaica</a></li><li><a href="#piscina">Aquecimento de piscina</a></li><li><a href="#aquecimento">Aquecimento solar</a></li><li><a href="#wallbox">Wallbox</a></li></ul></div>
-      <div><h4>Empresa</h4><ul><li><a href="#jornada">Como funciona</a></li><li><a href="#comparativo">Comparativo</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
-      <div><h4>Contato</h4><ul><li>(00) 00000-0000</li><li>contato@solucaosolar.com.br</li><li>Seg a Sex · 8h às 18h</li></ul></div>
+      <div><h4>Soluções</h4><ul><li><a href="#solucoes">Energia solar</a></li><li><a href="#solucoes">Aquecimento de piscina</a></li><li><a href="#solucoes">Aquecimento solar</a></li><li><a href="#solucoes">Wallbox</a></li></ul></div>
+      <div><h4>Navegue</h4><ul><li><a href="#um-dia">Um dia solar</a></li><li><a href="#economia">Economia</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>(00) 00000-0000</li><li>contato@solucaosolar.com.br</li><li>Seg a sex, 8h às 18h</li></ul></div>
     </div>
-    <div class="foot-bottom"><span>© <span id="yr"></span> Solução Solar. Todos os direitos reservados.</span><span>Valores apresentados são estimativas e podem variar conforme cada projeto.</span></div>
+    <div class="fb"><span>© <span id="yr"></span> Solução Solar. Todos os direitos reservados.</span><span>Valores são estimativas e podem variar conforme cada projeto. Fotos: Unsplash.</span></div>
   </div>
 </footer>
 
-<a class="wa" id="waFloat" href="#contato" aria-label="Falar no WhatsApp">
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.3-.13.58.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+<a class="wa" id="waFloat" href="#projeto" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.3-.13.58.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
 </a>
 
 <script>
@@ -1125,162 +936,160 @@ const WHATSAPP = "5500000000000";
   const $ = (s, c=document) => c.querySelector(s);
   const $$ = (s, c=document) => [...c.querySelectorAll(s)];
   const brl = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
-  $("#yr").textContent = new Date().getFullYear();
-
-  // Nav
-  const nav = $("#nav"), burger = $("#burger");
-  const onScroll = () => nav.classList.toggle("scrolled", scrollY > 30);
-  addEventListener("scroll", onScroll, {passive:true}); onScroll();
-  burger.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    burger.setAttribute("aria-expanded", open);
-  });
-  $$("#mobileMenu a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
-
-  // Hero sun parallax
-  const sun = $("#heroSun");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const waUrl = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+  $("#yr").textContent = new Date().getFullYear();
+  requestAnimationFrame(() => document.body.classList.add("loaded"));
+
+  // NAV
+  const nav = $("#nav"), mb = $("#menuBtn");
+  const onScroll = () => nav.classList.toggle("scrolled", scrollY > 10);
+  addEventListener("scroll", onScroll, {passive:true}); onScroll();
+  mb.addEventListener("click", () => { const o = nav.classList.toggle("open"); mb.setAttribute("aria-expanded", o); });
+  $$("#mMenu a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+
+  // Parallax
+  const par = [$("#heroImg"), $("#lifeImg")];
   if (!reduce) addEventListener("scroll", () => {
-    const y = Math.min(scrollY, innerHeight);
-    sun.style.transform = `translate(-50%, ${-y*0.35}px) scale(${1 + y/innerHeight*0.25})`;
+    par.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const p = (r.top + r.height/2 - innerHeight/2) / innerHeight;
+      img.style.transform = `translateY(${(-6 + p*-8).toFixed(2)}%)`;
+    });
   }, {passive:true});
 
   // Reveal
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-  }), {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12, rootMargin:"0px 0px -40px 0px"});
   $$(".rv").forEach(el => io.observe(el));
 
-  // Counters
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target, to = +el.dataset.count, pre = el.dataset.prefix||"", suf = el.dataset.suffix||"";
-    const t0 = performance.now(), dur = 1600;
-    const tick = t => { const p = Math.min((t-t0)/dur,1), v = Math.round(to*(1-Math.pow(1-p,3)));
-      el.textContent = pre + v + suf; if (p<1) requestAnimationFrame(tick); };
-    requestAnimationFrame(tick); cio.unobserve(el);
-  }), {threshold:.5});
-  $$("[data-count]").forEach(el => cio.observe(el));
-
-  // Comparison bars
-  const bio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    $$("i[data-w]", e.target).forEach(i => i.style.width = i.dataset.w + "%");
-    bio.unobserve(e.target);
-  }), {threshold:.3});
-  $$(".cmp").forEach(el => bio.observe(el));
-
-  // Manifesto word highlight (Apple-style)
-  const m = $("#manifesto");
-  const hl = ["sol","grátis","economia","real,","precisão","lado"];
-  m.innerHTML = m.textContent.trim().split(/\s+/).map(w =>
-    `<span class="w${hl.some(h => w.toLowerCase().startsWith(h)) ? " hl" : ""}">${w}</span>`).join(" ");
-  const words = $$(".w", m);
-  const paint = () => {
-    const r = m.getBoundingClientRect(), vh = innerHeight;
-    const p = Math.min(Math.max((vh*0.85 - r.top) / (r.height + vh*0.35), 0), 1);
-    const n = Math.floor(p * words.length);
-    words.forEach((w,i) => w.classList.toggle("on", i < n));
-  };
-  if (reduce) words.forEach(w => w.classList.add("on"));
-  else { addEventListener("scroll", paint, {passive:true}); paint(); }
-
-  // Subnav active state
-  const links = $$(".subnav a[href^='#']").filter(a => !a.classList.contains("btn"));
-  const sio = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) links.forEach(a => a.classList.toggle("active", a.hash === "#"+e.target.id));
-  }), {rootMargin:"-45% 0px -50% 0px"});
-  links.forEach(a => { const s = $(a.hash); if (s) sio.observe(s); });
-
-  // A day with the sun
+  // DAY
   const DAY = {
-    m:{t:"06:30",l:"Manhã",eb:"Aquecimento solar",h:"Banho quente antes do café.",
-       p:"A água aquecida pelo sol ontem ficou guardada no reservatório térmico. Banho quente para a família toda, sem ligar o chuveiro elétrico.",
-       k:[["58 °C","no reservatório térmico"],["R$ 0","para aquecer o banho"],["0 kWh","de chuveiro elétrico"]],sun:[110,300,1]},
-    d:{t:"12:00",l:"Meio-dia",eb:"Fotovoltaica + piscina",h:"Sua usina no pico.",
-       p:"Os painéis geram mais do que a casa consome. O excedente vira crédito na distribuidora, e a piscina aquece com o sol forte, sem gás.",
-       k:[["6,8 kW","gerando agora"],["+22 kWh","em créditos hoje"],["29 °C","na piscina"]],sun:[400,70,1]},
-    e:{t:"18:30",l:"Fim de tarde",eb:"Wallbox",h:"Chegou em casa? O carro já está carregando.",
-       p:"O Wallbox carrega até 5× mais rápido que a tomada comum, usando os créditos que o sol gerou durante o dia.",
-       k:[["7,4 kW","de potência de recarga"],["R$ 0,02","por km rodado*"],["DR + DPS","proteção completa"]],sun:[690,310,1]},
-    n:{t:"23:00",l:"Noite",eb:"Créditos de energia",h:"A casa dorme. A economia continua.",
-       p:"À noite, você usa os créditos acumulados durante o dia. E a conta que chega no fim do mês é até 95% menor.",
-       k:[["100%","de bateria pela manhã"],["até 95%","menos na conta de luz"],["24 h","de monitoramento"]],sun:[760,440,0]}
+    m:{t:"06:30", h:"Seu dia começa.<br>O banho quente também.", p:"A água aquecida pelo sol ontem está pronta no reservatório. Banho quente para toda a família, sem o chuveiro elétrico pesando na conta."},
+    d:{t:"12:00", h:"Sol a pino.<br>Usina a todo vapor.", p:"Os painéis geram mais do que a casa consome. O excedente vira crédito com a distribuidora, e a piscina aquece sem gastar nada."},
+    e:{t:"18:30", h:"Chegou em casa.<br>O carro também.", p:"O Wallbox carrega até 5 vezes mais rápido que a tomada comum, usando a energia que o sol gerou durante o dia."},
+    n:{t:"23:00", h:"Hora de descansar.<br>A economia, não.", p:"À noite, você usa os créditos acumulados durante o dia. No fim do mês, a conta chega até 95% menor."}
   };
-  const day = $("#um-dia"), tabs = $$(".day-tab"), panel = $("#dayPanel"), sunG = $("#sunG");
-  const order = ["m","d","e","n"]; let cur = "m", timer = null, auto = !reduce;
-  const setDay = (s, playing) => {
-    cur = s; day.dataset.s = s; const d = DAY[s];
-    sunG.style.transform = `translate(${d.sun[0]}px,${d.sun[1]}px)`; sunG.style.opacity = d.sun[2];
-    $("#dayClock").firstChild.nodeValue = d.t; $("#dayClockL").textContent = d.l;
-    panel.classList.add("swap");
+  const order = ["m","d","e","n"], tabs = $$(".tab"), imgs = $$(".day-img"), txt = $("#dayTxt");
+  let cur = "m", timer = null, auto = !reduce;
+  const setDay = (s, play) => {
+    cur = s;
+    imgs.forEach(i => i.classList.toggle("on", i.dataset.s === s));
+    txt.classList.add("swap");
     setTimeout(() => {
-      $("#dayEyebrow").textContent = d.eb; $("#dayTitle").textContent = d.h; $("#dayText").textContent = d.p;
-      $("#dayK").innerHTML = d.k.map(([b,t]) => `<div><b>${b}</b><span>${t}</span></div>`).join("");
-      panel.classList.remove("swap");
-    }, 300);
-    tabs.forEach(t => { t.classList.remove("on","play","static"); t.setAttribute("aria-selected", t.dataset.s === s); });
-    const tab = tabs.find(t => t.dataset.s === s); void tab.offsetWidth;
-    tab.classList.add("on", playing ? "play" : "static");
+      $("#dayTime").innerHTML = DAY[s].t + "<small>h</small>";
+      $("#dayTitle").innerHTML = DAY[s].h; $("#dayText").textContent = DAY[s].p;
+      txt.classList.remove("swap");
+    }, 350);
+    tabs.forEach(t => { t.classList.remove("on","play"); t.setAttribute("aria-selected", t.dataset.s === s); });
+    const t = tabs.find(t => t.dataset.s === s); void t.offsetWidth; t.classList.add("on"); if (play) t.classList.add("play");
   };
-  const next = () => setDay(order[(order.indexOf(cur)+1) % 4], true);
-  const start = () => { if (auto && !timer) { setDay(cur, true); timer = setInterval(next, 7000); } };
+  const start = () => { if (auto && !timer){ setDay(cur, true); timer = setInterval(() => setDay(order[(order.indexOf(cur)+1)%4], true), 7000); } };
   const stop = () => { clearInterval(timer); timer = null; };
   tabs.forEach(t => t.addEventListener("click", () => { auto = false; stop(); setDay(t.dataset.s, false); }));
-  setDay("m", false);
-  new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop()), {threshold:.35}).observe(day);
+  new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop()), {threshold:.4}).observe($("#um-dia"));
 
-  // Simulator
-  const range = $("#billRange"); let factor = 1;
+  // PLACES
+  const PL = [
+    {b:"Telhado residencial", h:"Seu telhado pode fazer mais.", p:"Telhado cerâmico, metálico ou laje: projetamos o sistema para o seu espaço, com estética discreta e o máximo de geração.", c:"Para casas, sobrados e condomínios"},
+    {b:"Galpão comercial", h:"Energia que vira margem de lucro.", p:"Reduza um dos maiores custos fixos do seu negócio e proteja a empresa dos reajustes de tarifa. Projetos para comércios, indústrias e galpões.", c:"Para comércios, indústrias e galpões"},
+    {b:"Propriedade rural", h:"No campo, cada kWh conta.", p:"Irrigação, ordenha, refrigeração e a casa sede com energia do sol. Sistemas em solo ou telhado, dimensionados para a sua produção.", c:"Para sítios, fazendas e agroindústrias"}
+  ];
+  const plTabs = $$(".pl-tab"), plImgs = $$(".pl-img img"), plTxt = $("#plTxt");
+  plTabs.forEach(b => b.addEventListener("click", () => {
+    const i = +b.dataset.p, d = PL[i];
+    plTabs.forEach(x => x.classList.toggle("on", x === b));
+    plImgs.forEach(im => im.style.opacity = +im.dataset.p === i ? 1 : 0);
+    $("#plBadge").textContent = d.b;
+    plTxt.classList.add("swap");
+    setTimeout(() => { $("#plTitle").textContent = d.h; $("#plText").textContent = d.p; $("#plCheck").textContent = d.c; plTxt.classList.remove("swap"); }, 300);
+  }));
+
+  // INCLUDED
+  const INC = [
+    {h:"Capturam o sol.", p:"Módulos de alta eficiência, totalmente pretos, com garantia de performance de 25 anos. Discretos no telhado, potentes na geração."},
+    {h:"Transforma luz em energia para a casa.", p:"O inversor converte a energia dos painéis para a sua rede elétrica com segurança e eficiência, sempre conectado à internet."},
+    {h:"Tudo na palma da mão.", p:"Acompanhe a geração e a economia pelo aplicativo. E nós acompanhamos também: se algo sair do esperado, a gente avisa você."},
+    {h:"Burocracia? Por nossa conta.", p:"Projeto elétrico, ART e homologação com a distribuidora inclusos. Você só acompanha, e a gente resolve."}
+  ];
+  const incSel = i => {
+    $$(".hot,.inc-chip").forEach(x => x.classList.toggle("on", +x.dataset.i === i));
+    const b = $("#incBody"); b.classList.add("swap");
+    setTimeout(() => { $("#incTitle").textContent = INC[i].h; $("#incText").textContent = INC[i].p; b.classList.remove("swap"); }, 280);
+  };
+  $$(".hot,.inc-chip").forEach(x => x.addEventListener("click", () => incSel(+x.dataset.i)));
+
+  // SAVINGS
+  const range = $("#billRange");
   const calc = () => {
     const bill = +range.value;
     range.style.setProperty("--p", ((bill-range.min)/(range.max-range.min)*100)+"%");
     $("#billVal").textContent = bill.toLocaleString("pt-BR");
-    const tariff = 0.95, kwhMonth = bill / tariff;
-    const kwp = kwhMonth / 120 * factor;                 // ~120 kWh/kWp/mês
-    const residual = Math.max(bill * 0.08, 50);          // taxa mínima + encargos
-    const monthSave = Math.max(bill - residual, 0);
-    const invest = kwp * 3900;                           // R$/kWp médio instalado
-    let total = 0, yearly = monthSave * 12;
-    for (let y=0; y<25; y++){ total += yearly * Math.pow(0.995, y); yearly *= 1.06; }
-    const payback = invest / (monthSave * 12);
+    const kwhMonth = bill / 0.95, kwp = kwhMonth / 120;
+    const residual = Math.max(bill * 0.08, 50), monthSave = Math.max(bill - residual, 0);
+    let total = 0, y = monthSave * 12;
+    for (let i=0;i<25;i++){ total += y * Math.pow(.995, i); y *= 1.06; }
+    const payback = kwp * 3900 / (monthSave * 12);
     $("#save25").textContent = brl(Math.round(total/1000)*1000);
     $("#saveMonth").textContent = brl(monthSave);
-    $("#barBefore").textContent = brl(bill);
-    $("#barAfter").textContent = brl(residual);
-    $("#barAfterFill").style.width = Math.max(residual/bill*100, 3) + "%";
     $("#kwp").textContent = kwp.toFixed(1).replace(".",",") + " kWp";
     $("#panels").textContent = Math.ceil(kwp*1000/610);
-    $("#payback").textContent = payback < 3 ? "≈ 3 anos" : (payback.toFixed(1).replace(".",",") + " anos");
-    $("#co2").textContent = Math.round(kwhMonth*12*25*0.06/1000) + " t";
+    $("#payback").textContent = (payback < 3 ? "≈ 3" : payback.toFixed(1).replace(".",",")) + " anos";
+    const no = bill*12, yes = residual*12, max = Math.max(no, 9600);
+    $("#vLuzNo").textContent = brl(no); $("#vLuzYes").textContent = brl(yes);
+    $("#cLuz").textContent = "− " + brl(no - yes) + "/ano";
+    if ($("#economia .sav-r").dataset.shown){ $("#bLuzNo").style.width = no/max*100+"%"; $("#bLuzYes").style.width = Math.max(yes/max*100,1.5)+"%"; }
+    $$("#economia i[data-w]").forEach(i => i.dataset.scale = (9600/max).toString());
+    if ($("#economia .sav-r").dataset.shown) $$("#economia i[data-w]").forEach(i => i.style.width = (+i.dataset.w * +i.dataset.scale) + "%");
   };
-  range.addEventListener("input", calc);
-  $$("#seg button").forEach(b => b.addEventListener("click", () => {
-    $$("#seg button").forEach(x => x.classList.remove("on")); b.classList.add("on");
-    factor = +b.dataset.f; calc();
-  }));
-  calc();
-  $("#simCta").addEventListener("click", () => { $("#fConta").value = "R$ " + (+range.value).toLocaleString("pt-BR"); });
+  range.addEventListener("input", calc); calc();
+  new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting){ e.target.dataset.shown = 1; calc(); o.disconnect(); } }), {threshold:.3}).observe($("#economia .sav-r"));
 
-  // Product CTAs preselect interest
-  $$("[data-interest]").forEach(a => a.addEventListener("click", () => {
-    const sel = $("#fInteresse");
-    [...sel.options].forEach(o => { if (o.text.toLowerCase().includes(a.dataset.interest.toLowerCase().split(" ").slice(-1)[0])) sel.value = o.value; });
+  // FORM (multi-step)
+  const panes = $$(".f-pane"), stepsLi = $$("#fSteps li"), next = $("#fNext"), back = $("#fBack");
+  const state = {imovel:"", conta:600, interesse:new Set()};
+  let step = 0;
+  const show = n => {
+    step = n;
+    panes.forEach(p => p.classList.toggle("on", +p.dataset.step === n));
+    stepsLi.forEach((li,i) => { li.classList.toggle("on", i === n); li.classList.toggle("done", i < n); });
+    $("#fCount").textContent = n < 4 ? `${n+1} / 4` : "Enviado";
+    back.hidden = n === 0 || n === 4;
+    next.style.visibility = n === 4 ? "hidden" : "visible";
+    next.innerHTML = n === 3 ? 'Enviar pelo WhatsApp <svg><use href="#i-arrow"/></svg>' : 'Próximo <svg><use href="#i-right"/></svg>';
+  };
+  $$(".opts").forEach(g => g.addEventListener("click", e => {
+    const o = e.target.closest(".opt"); if (!o) return;
+    if (g.hasAttribute("data-single")){ $$(".opt", g).forEach(x => x.classList.toggle("on", x === o)); state.imovel = o.dataset.v; setTimeout(() => show(1), 250); }
+    else { o.classList.toggle("on"); o.classList.contains("on") ? state.interesse.add(o.dataset.v) : state.interesse.delete(o.dataset.v); }
   }));
-
-  // WhatsApp
-  const waUrl = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
-  $("#waFloat").href = waUrl("Olá, Solução Solar! Quero saber mais sobre as soluções de vocês.");
-  $("#waFloat").target = "_blank"; $("#waFloat").rel = "noopener";
-  $("#leadForm").addEventListener("submit", e => {
-    e.preventDefault();
-    const f = e.target, nome = f.nome.value.trim(), tel = f.tel.value.trim();
-    if (!nome || !tel) { (nome ? f.tel : f.nome).focus(); return; }
-    const msg = `Olá, Solução Solar! Meu nome é ${nome}.\nTenho interesse em: ${f.interesse.value}.\n` +
-      (f.cidade.value ? `Cidade: ${f.cidade.value}\n` : "") +
-      (f.conta.value ? `Conta de luz média: ${f.conta.value}\n` : "") + `WhatsApp: ${tel}`;
+  const fb = $("#fBill");
+  const setBill = v => { state.conta = v; if (v){ fb.value = v; } fb.style.setProperty("--p", ((fb.value-fb.min)/(fb.max-fb.min)*100)+"%"); $("#fBillVal").textContent = v ? (+fb.value).toLocaleString("pt-BR") : "— não sei"; };
+  fb.addEventListener("input", () => setBill(+fb.value)); setBill(600);
+  $$(".presets button").forEach(b => b.addEventListener("click", () => setBill(+b.dataset.b)));
+  back.addEventListener("click", () => show(Math.max(step-1, 0)));
+  next.addEventListener("click", () => {
+    if (step < 3) return show(step+1);
+    const nome = $("#fNome"), tel = $("#fTel");
+    [nome, tel].forEach(i => i.classList.toggle("err", !i.value.trim()));
+    if (!nome.value.trim() || !tel.value.trim()) return (nome.value.trim() ? tel : nome).focus();
+    const msg = `Olá, Solução Solar! Meu nome é ${nome.value.trim()}.\n` +
+      `Imóvel: ${state.imovel || "não informado"}\n` +
+      `Conta de luz média: ${state.conta ? brl(state.conta) : "não sei"}\n` +
+      `Interesse: ${state.interesse.size ? [...state.interesse].join(", ") : "quero entender as opções"}\n` +
+      ($("#fCidade").value.trim() ? `Cidade: ${$("#fCidade").value.trim()}\n` : "") + `WhatsApp: ${tel.value.trim()}`;
     window.open(waUrl(msg), "_blank", "noopener");
+    show(4);
   });
+  // Product buttons preselect interest
+  $$("[data-interest]").forEach(a => a.addEventListener("click", () => {
+    const o = $(`.opt[data-k="${a.dataset.interest}"]`);
+    if (o && !o.classList.contains("on")){ o.classList.add("on"); state.interesse.add(o.dataset.v); }
+  }));
+
+  // WhatsApp links
+  const hello = waUrl("Olá, Solução Solar! Quero saber mais sobre as soluções de vocês.");
+  [$("#waFloat"), $(".wa-link")].forEach(a => { a.href = hello; a.target = "_blank"; a.rel = "noopener"; });
 })();
 </script>
 </body>
